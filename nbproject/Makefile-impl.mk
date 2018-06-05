@@ -24,7 +24,7 @@ CLEAN_SUBPROJECTS=${CLEAN_SUBPROJECTS_${SUBPROJECTS}}
 
 
 # Project Name
-PROJECTNAME=PTL30_fader_Master_test3
+PROJECTNAME=PTL30_fader_Master_test
 
 # Active Configuration
 DEFAULTCONF=default

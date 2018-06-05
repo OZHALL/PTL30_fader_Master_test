@@ -35,17 +35,17 @@
 #pragma config CP = OFF
 #pragma config CPD = OFF
 
-# 26 "C:\Program Files (x86)\Microchip\xc8\v1.42\include\htc.h"
+# 26 "C:\Program Files (x86)\Microchip\xc8\v1.45\include\htc.h"
 extern const char __xc8_OPTIM_SPEED;
 
 extern double __fpnormalize(double);
 
 
-# 13 "C:\Program Files (x86)\Microchip\xc8\v1.42\include\xc8debug.h"
+# 13 "C:\Program Files (x86)\Microchip\xc8\v1.45\include\xc8debug.h"
 #pragma intrinsic(__builtin_software_breakpoint)
 extern void __builtin_software_breakpoint(void);
 
-# 50 "C:\Program Files (x86)\Microchip\xc8\v1.42\include\pic16f18855.h"
+# 50 "C:\Program Files (x86)\Microchip\xc8\v1.45\include\pic16f18855.h"
 extern volatile unsigned char INDF0 @ 0x000;
 
 asm("INDF0 equ 00h");
@@ -3302,39 +3302,16 @@ unsigned T2MODE4 :1;
 extern volatile T2HLTbits_t T2HLTbits @ 0x28F;
 
 # 9431
-extern volatile unsigned char T2CLK @ 0x290;
-
-asm("T2CLK equ 0290h");
-
-
 extern volatile unsigned char T2CLKCON @ 0x290;
 
 asm("T2CLKCON equ 0290h");
 
 
-typedef union {
-struct {
-unsigned CS :4;
-};
-struct {
-unsigned CS0 :1;
-unsigned CS1 :1;
-unsigned CS2 :1;
-unsigned CS3 :1;
-};
-struct {
-unsigned T2CS :4;
-};
-struct {
-unsigned T2CS0 :1;
-unsigned T2CS1 :1;
-unsigned T2CS2 :1;
-unsigned T2CS3 :1;
-};
-} T2CLKbits_t;
-extern volatile T2CLKbits_t T2CLKbits @ 0x290;
+extern volatile unsigned char T2CLK @ 0x290;
 
-# 9514
+asm("T2CLK equ 0290h");
+
+
 typedef union {
 struct {
 unsigned CS :4;
@@ -3356,6 +3333,29 @@ unsigned T2CS3 :1;
 };
 } T2CLKCONbits_t;
 extern volatile T2CLKCONbits_t T2CLKCONbits @ 0x290;
+
+# 9514
+typedef union {
+struct {
+unsigned CS :4;
+};
+struct {
+unsigned CS0 :1;
+unsigned CS1 :1;
+unsigned CS2 :1;
+unsigned CS3 :1;
+};
+struct {
+unsigned T2CS :4;
+};
+struct {
+unsigned T2CS0 :1;
+unsigned T2CS1 :1;
+unsigned T2CS2 :1;
+unsigned T2CS3 :1;
+};
+} T2CLKbits_t;
+extern volatile T2CLKbits_t T2CLKbits @ 0x290;
 
 # 9589
 extern volatile unsigned char T2RST @ 0x291;
@@ -3515,39 +3515,16 @@ unsigned T4MODE4 :1;
 extern volatile T4HLTbits_t T4HLTbits @ 0x295;
 
 # 10031
-extern volatile unsigned char T4CLK @ 0x296;
-
-asm("T4CLK equ 0296h");
-
-
 extern volatile unsigned char T4CLKCON @ 0x296;
 
 asm("T4CLKCON equ 0296h");
 
 
-typedef union {
-struct {
-unsigned CS :4;
-};
-struct {
-unsigned CS0 :1;
-unsigned CS1 :1;
-unsigned CS2 :1;
-unsigned CS3 :1;
-};
-struct {
-unsigned T4CS :4;
-};
-struct {
-unsigned T4CS0 :1;
-unsigned T4CS1 :1;
-unsigned T4CS2 :1;
-unsigned T4CS3 :1;
-};
-} T4CLKbits_t;
-extern volatile T4CLKbits_t T4CLKbits @ 0x296;
+extern volatile unsigned char T4CLK @ 0x296;
 
-# 10114
+asm("T4CLK equ 0296h");
+
+
 typedef union {
 struct {
 unsigned CS :4;
@@ -3569,6 +3546,29 @@ unsigned T4CS3 :1;
 };
 } T4CLKCONbits_t;
 extern volatile T4CLKCONbits_t T4CLKCONbits @ 0x296;
+
+# 10114
+typedef union {
+struct {
+unsigned CS :4;
+};
+struct {
+unsigned CS0 :1;
+unsigned CS1 :1;
+unsigned CS2 :1;
+unsigned CS3 :1;
+};
+struct {
+unsigned T4CS :4;
+};
+struct {
+unsigned T4CS0 :1;
+unsigned T4CS1 :1;
+unsigned T4CS2 :1;
+unsigned T4CS3 :1;
+};
+} T4CLKbits_t;
+extern volatile T4CLKbits_t T4CLKbits @ 0x296;
 
 # 10189
 extern volatile unsigned char T4RST @ 0x297;
@@ -3728,39 +3728,16 @@ unsigned T6MODE4 :1;
 extern volatile T6HLTbits_t T6HLTbits @ 0x29B;
 
 # 10631
-extern volatile unsigned char T6CLK @ 0x29C;
-
-asm("T6CLK equ 029Ch");
-
-
 extern volatile unsigned char T6CLKCON @ 0x29C;
 
 asm("T6CLKCON equ 029Ch");
 
 
-typedef union {
-struct {
-unsigned CS :4;
-};
-struct {
-unsigned CS0 :1;
-unsigned CS1 :1;
-unsigned CS2 :1;
-unsigned CS3 :1;
-};
-struct {
-unsigned T6CS :4;
-};
-struct {
-unsigned T6CS0 :1;
-unsigned T6CS1 :1;
-unsigned T6CS2 :1;
-unsigned T6CS3 :1;
-};
-} T6CLKbits_t;
-extern volatile T6CLKbits_t T6CLKbits @ 0x29C;
+extern volatile unsigned char T6CLK @ 0x29C;
 
-# 10714
+asm("T6CLK equ 029Ch");
+
+
 typedef union {
 struct {
 unsigned CS :4;
@@ -3782,6 +3759,29 @@ unsigned T6CS3 :1;
 };
 } T6CLKCONbits_t;
 extern volatile T6CLKCONbits_t T6CLKCONbits @ 0x29C;
+
+# 10714
+typedef union {
+struct {
+unsigned CS :4;
+};
+struct {
+unsigned CS0 :1;
+unsigned CS1 :1;
+unsigned CS2 :1;
+unsigned CS3 :1;
+};
+struct {
+unsigned T6CS :4;
+};
+struct {
+unsigned T6CS0 :1;
+unsigned T6CS1 :1;
+unsigned T6CS2 :1;
+unsigned T6CS3 :1;
+};
+} T6CLKbits_t;
+extern volatile T6CLKbits_t T6CLKbits @ 0x29C;
 
 # 10789
 extern volatile unsigned char T6RST @ 0x29D;
@@ -16474,13 +16474,13 @@ extern volatile __bit T2CKPS2 @ (((unsigned) &T2CON)*8) + 6;
 
 extern volatile __bit T2CKSYNC @ (((unsigned) &T2HLT)*8) + 5;
 
-extern volatile __bit T2CS0 @ (((unsigned) &T2CLK)*8) + 0;
+extern volatile __bit T2CS0 @ (((unsigned) &T2CLKCON)*8) + 0;
 
-extern volatile __bit T2CS1 @ (((unsigned) &T2CLK)*8) + 1;
+extern volatile __bit T2CS1 @ (((unsigned) &T2CLKCON)*8) + 1;
 
-extern volatile __bit T2CS2 @ (((unsigned) &T2CLK)*8) + 2;
+extern volatile __bit T2CS2 @ (((unsigned) &T2CLKCON)*8) + 2;
 
-extern volatile __bit T2CS3 @ (((unsigned) &T2CLK)*8) + 3;
+extern volatile __bit T2CS3 @ (((unsigned) &T2CLKCON)*8) + 3;
 
 extern volatile __bit T2MODE0 @ (((unsigned) &T2HLT)*8) + 0;
 
@@ -16592,13 +16592,13 @@ extern volatile __bit T4CKPS2 @ (((unsigned) &T4CON)*8) + 6;
 
 extern volatile __bit T4CKSYNC @ (((unsigned) &T4HLT)*8) + 5;
 
-extern volatile __bit T4CS0 @ (((unsigned) &T4CLK)*8) + 0;
+extern volatile __bit T4CS0 @ (((unsigned) &T4CLKCON)*8) + 0;
 
-extern volatile __bit T4CS1 @ (((unsigned) &T4CLK)*8) + 1;
+extern volatile __bit T4CS1 @ (((unsigned) &T4CLKCON)*8) + 1;
 
-extern volatile __bit T4CS2 @ (((unsigned) &T4CLK)*8) + 2;
+extern volatile __bit T4CS2 @ (((unsigned) &T4CLKCON)*8) + 2;
 
-extern volatile __bit T4CS3 @ (((unsigned) &T4CLK)*8) + 3;
+extern volatile __bit T4CS3 @ (((unsigned) &T4CLKCON)*8) + 3;
 
 extern volatile __bit T4MODE0 @ (((unsigned) &T4HLT)*8) + 0;
 
@@ -16710,13 +16710,13 @@ extern volatile __bit T6CKPS2 @ (((unsigned) &T6CON)*8) + 6;
 
 extern volatile __bit T6CKSYNC @ (((unsigned) &T6HLT)*8) + 5;
 
-extern volatile __bit T6CS0 @ (((unsigned) &T6CLK)*8) + 0;
+extern volatile __bit T6CS0 @ (((unsigned) &T6CLKCON)*8) + 0;
 
-extern volatile __bit T6CS1 @ (((unsigned) &T6CLK)*8) + 1;
+extern volatile __bit T6CS1 @ (((unsigned) &T6CLKCON)*8) + 1;
 
-extern volatile __bit T6CS2 @ (((unsigned) &T6CLK)*8) + 2;
+extern volatile __bit T6CS2 @ (((unsigned) &T6CLKCON)*8) + 2;
 
-extern volatile __bit T6CS3 @ (((unsigned) &T6CLK)*8) + 3;
+extern volatile __bit T6CS3 @ (((unsigned) &T6CLKCON)*8) + 3;
 
 extern volatile __bit T6MODE0 @ (((unsigned) &T6HLT)*8) + 0;
 
@@ -17345,18 +17345,18 @@ extern volatile __bit nWRITE1 @ (((unsigned) &SSP1STAT)*8) + 2;
 extern volatile __bit nWRITE2 @ (((unsigned) &SSP2STAT)*8) + 2;
 
 
-# 27 "C:\Program Files (x86)\Microchip\xc8\v1.42\include\pic.h"
+# 28 "C:\Program Files (x86)\Microchip\xc8\v1.45\include\pic.h"
 #pragma intrinsic(__nop)
 extern void __nop(void);
 
-# 114 "C:\Program Files (x86)\Microchip\xc8\v1.42\include\eeprom_routines.h"
+# 114 "C:\Program Files (x86)\Microchip\xc8\v1.45\include\eeprom_routines.h"
 extern void eeprom_write(unsigned char addr, unsigned char value);
 extern unsigned char eeprom_read(unsigned char addr);
 extern void eecpymem(volatile unsigned char *to, __eeprom unsigned char *from, unsigned char size);
 extern void memcpyee(__eeprom unsigned char *to, const unsigned char *from, unsigned char size);
 
 
-# 151 "C:\Program Files (x86)\Microchip\xc8\v1.42\include\pic.h"
+# 152 "C:\Program Files (x86)\Microchip\xc8\v1.45\include\pic.h"
 #pragma intrinsic(_delay)
 extern __nonreentrant void _delay(unsigned long);
 #pragma intrinsic(_delaywdt)
@@ -17365,10 +17365,10 @@ extern __nonreentrant void _delaywdt(unsigned long);
 #pragma intrinsic(_delay3)
 extern __nonreentrant void _delay3(unsigned char);
 
-# 192
-extern unsigned char __resetbits;
-extern __bit __powerdown;
-extern __bit __timeout;
+# 193
+extern __bank0 unsigned char __resetbits;
+extern __bank0 __bit __powerdown;
+extern __bank0 __bit __timeout;
 
 # 532 "mcc_generated_files/pin_manager.h"
 void PIN_MANAGER_Initialize (void);
@@ -17376,61 +17376,79 @@ void PIN_MANAGER_Initialize (void);
 # 544
 void PIN_MANAGER_IOC(void);
 
-# 13 "C:\Program Files (x86)\Microchip\xc8\v1.42\include\stdint.h"
+# 13 "C:\Program Files (x86)\Microchip\xc8\v1.45\include\stdint.h"
 typedef signed char int8_t;
 
 # 20
 typedef signed int int16_t;
 
-# 38
+# 28
+typedef signed short long int int24_t;
+
+# 36
 typedef signed long int int32_t;
 
-# 45
+# 43
 typedef unsigned char uint8_t;
 
-# 51
+# 49
 typedef unsigned int uint16_t;
 
-# 67
+# 56
+typedef unsigned short long int uint24_t;
+
+# 63
 typedef unsigned long int uint32_t;
 
-# 75
+# 71
 typedef signed char int_least8_t;
 
-# 82
+# 78
 typedef signed int int_least16_t;
 
-# 104
+# 90
+typedef signed short long int int_least24_t;
+
+# 98
 typedef signed long int int_least32_t;
 
-# 111
+# 105
 typedef unsigned char uint_least8_t;
 
-# 117
+# 111
 typedef unsigned int uint_least16_t;
 
-# 136
+# 121
+typedef unsigned short long int uint_least24_t;
+
+# 128
 typedef unsigned long int uint_least32_t;
 
-# 145
+# 137
 typedef signed char int_fast8_t;
 
-# 152
+# 144
 typedef signed int int_fast16_t;
 
-# 174
+# 156
+typedef signed short long int int_fast24_t;
+
+# 164
 typedef signed long int int_fast32_t;
 
-# 181
+# 171
 typedef unsigned char uint_fast8_t;
 
-# 187
+# 177
 typedef unsigned int uint_fast16_t;
 
-# 206
+# 187
+typedef unsigned short long int uint_fast24_t;
+
+# 194
 typedef unsigned long int uint_fast32_t;
 
-# 212
+# 200
 typedef int32_t intmax_t;
 
 
@@ -17448,89 +17466,14 @@ typedef int16_t intptr_t;
 
 typedef uint16_t uintptr_t;
 
-# 12 "C:\Program Files (x86)\Microchip\xc8\v1.42\include\stdbool.h"
+# 12 "C:\Program Files (x86)\Microchip\xc8\v1.45\include\stdbool.h"
 typedef unsigned char bool;
 
 # 110 "mcc_generated_files/interrupt_manager.h"
 void interrupt INTERRUPT_InterruptManager(void);
 
-# 4 "C:\Program Files (x86)\Microchip\xc8\v1.42\include\__size_t.h"
-typedef unsigned size_t;
-
-# 6 "C:\Program Files (x86)\Microchip\xc8\v1.42\include\stddef.h"
-typedef int ptrdiff_t;
-
-# 83 "mcc_generated_files/i2c1.h"
-typedef enum
-{
-I2C1_MESSAGE_COMPLETE,
-I2C1_MESSAGE_FAIL,
-I2C1_MESSAGE_PENDING,
-I2C1_STUCK_START,
-I2C1_MESSAGE_ADDRESS_NO_ACK,
-I2C1_DATA_NO_ACK,
-I2C1_LOST_STATE
-} I2C1_MESSAGE_STATUS;
-
-# 108
-typedef struct
-{
-uint16_t address;
-
-
-uint8_t length;
-uint8_t *pbuffer;
-} I2C1_TRANSACTION_REQUEST_BLOCK;
-
-# 220
-void I2C1_Initialize(void);
-
-# 259
-void I2C1_MasterWrite(
-uint8_t *pdata,
-uint8_t length,
-uint16_t address,
-I2C1_MESSAGE_STATUS *pstatus);
-
-# 406
-void I2C1_MasterRead(
-uint8_t *pdata,
-uint8_t length,
-uint16_t address,
-I2C1_MESSAGE_STATUS *pstatus);
-
-# 516
-void I2C1_MasterTRBInsert(
-uint8_t count,
-I2C1_TRANSACTION_REQUEST_BLOCK *ptrb_list,
-I2C1_MESSAGE_STATUS *pflag);
-
-# 560
-void I2C1_MasterReadTRBBuild(
-I2C1_TRANSACTION_REQUEST_BLOCK *ptrb,
-uint8_t *pdata,
-uint8_t length,
-uint16_t address);
-
-# 605
-void I2C1_MasterWriteTRBBuild(
-I2C1_TRANSACTION_REQUEST_BLOCK *ptrb,
-uint8_t *pdata,
-uint8_t length,
-uint16_t address);
-
-# 647
-bool I2C1_MasterQueueIsEmpty(void);
-
-# 685
-bool I2C1_MasterQueueIsFull(void);
-void I2C1_BusCollisionISR( void );
-void I2C1_ISR ( void );
-
 # 71 "mcc_generated_files/adcc.h"
 typedef uint16_t adc_result_t;
-
-typedef signed short long int int24_t;
 
 # 88
 typedef enum
@@ -17630,6 +17573,79 @@ bool ADCC_HasErrorCrossedLowerThreshold(void);
 
 # 774
 uint8_t ADCC_GetConversionStageStatus(void);
+
+# 4 "C:\Program Files (x86)\Microchip\xc8\v1.45\include\__size_t.h"
+typedef unsigned size_t;
+
+# 6 "C:\Program Files (x86)\Microchip\xc8\v1.45\include\stddef.h"
+typedef int ptrdiff_t;
+
+# 83 "mcc_generated_files/i2c1.h"
+typedef enum
+{
+I2C1_MESSAGE_COMPLETE,
+I2C1_MESSAGE_FAIL,
+I2C1_MESSAGE_PENDING,
+I2C1_STUCK_START,
+I2C1_MESSAGE_ADDRESS_NO_ACK,
+I2C1_DATA_NO_ACK,
+I2C1_LOST_STATE
+} I2C1_MESSAGE_STATUS;
+
+# 108
+typedef struct
+{
+uint16_t address;
+
+
+uint8_t length;
+uint8_t *pbuffer;
+} I2C1_TRANSACTION_REQUEST_BLOCK;
+
+# 220
+void I2C1_Initialize(void);
+
+# 259
+void I2C1_MasterWrite(
+uint8_t *pdata,
+uint8_t length,
+uint16_t address,
+I2C1_MESSAGE_STATUS *pstatus);
+
+# 406
+void I2C1_MasterRead(
+uint8_t *pdata,
+uint8_t length,
+uint16_t address,
+I2C1_MESSAGE_STATUS *pstatus);
+
+# 516
+void I2C1_MasterTRBInsert(
+uint8_t count,
+I2C1_TRANSACTION_REQUEST_BLOCK *ptrb_list,
+I2C1_MESSAGE_STATUS *pflag);
+
+# 560
+void I2C1_MasterReadTRBBuild(
+I2C1_TRANSACTION_REQUEST_BLOCK *ptrb,
+uint8_t *pdata,
+uint8_t length,
+uint16_t address);
+
+# 605
+void I2C1_MasterWriteTRBBuild(
+I2C1_TRANSACTION_REQUEST_BLOCK *ptrb,
+uint8_t *pdata,
+uint8_t length,
+uint16_t address);
+
+# 647
+bool I2C1_MasterQueueIsEmpty(void);
+
+# 685
+bool I2C1_MasterQueueIsFull(void);
+void I2C1_BusCollisionISR( void );
+void I2C1_ISR ( void );
 
 # 70 "mcc_generated_files/mcc.h"
 void SYSTEM_Initialize(void);
