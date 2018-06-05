@@ -240,13 +240,13 @@ void main(void)
             iLSByte = iCounter&0xFF;
             MYI2C_Write2LEDBytes(I2C_ADDRESS_FADELED0,iMSByte,iLSByte);
             //}
-            */
             prevFader8bitValue=fader8bitValue;
             //delay(); 
             //Clear_WDT(); // clear watchdog timer, until i figure  out how to shut it off
             iCounter++;    // 16 bits auto rollover
             if (fader8bitValue<252)
                 delay(1*(255-fader8bitValue)); // invert so that higher is faster
+             */
     } 
  }
 void UpdateLEDsFromValue(uint8_t inFaderNum,uint8_t inValue)
@@ -357,93 +357,7 @@ I2C1_MESSAGE_STATUS MYI2C_ReadFaders(uint8_t slaveDeviceAddress)
 
         if (status == I2C1_MESSAGE_COMPLETE)
             break;
-
-        // if status is  I2C1_MESSAGE_ADDRESS_NO_ACK,
-        //               or I2C1_DATA_NO_ACK,
-        // The device may be busy and needs more time for the last
-        // write so we can retry writing the data, this is why we
-        // use a while loop here
-
-        // check for max retry and skip this byte
-        if (timeOut == SLAVE_I2C_GENERIC_RETRY_MAX)
-            break;
-        else
-            timeOut++;
-
     }
-
-    if (I2C1_MESSAGE_FAIL==status) { 
-        //"Houston we have a problem!!!";
-    }
-
-    return status;
-}
-/* sample code for emulated EEPROM read
-        <code>
-
-  
-            void EMULATED_EEPROM_Read(
-                                           uint16_t slaveDeviceAddress,
-                                           uint16_t dataAddress,
-                                           uint8_t *pData,
-                                           uint16_t nCount)
-            {
-                I2C1_MESSAGE_STATUS status;
-                I2C1_TRANSACTION_REQUEST_BLOCK readTRB[2];
-                uint8_t     writeBuffer[3];
-                uint16_t    timeOut;
-
-                // this initial value is important
-                status = I2C1_MESSAGE_PENDING;
-
-                // build the write buffer first
-                // starting address of the EEPROM memory
-                writeBuffer[0] = (dataAddress >> 8);                        // high address
-                writeBuffer[1] = (uint8_t)(dataAddress);                    // low low address
-
-                // we need to create the TRBs for a random read sequence to the EEPROM
-                // Build TRB for sending address
-                I2C1_MasterWriteTRBBuild(   &readTRB[0],
-                                                writeBuffer,
-                                                2,
-                                                slaveDeviceAddress);
-                // Build TRB for receiving data
-                I2C1_MasterReadTRBBuild(    &readTRB[1],
-                                                pData,
-                                                nCount,
-                                                slaveDeviceAddress);
-
-                timeOut = 0;
-
-                while(status != I2C1_MESSAGE_FAIL)
-                {
-                    // now send the transactions
-                    I2C1_MasterTRBInsert(2, readTRB, &status);
-
-                    // wait for the message to be sent or status has changed.
-                    while(status == I2C1_MESSAGE_PENDING);
-
-                    if (status == I2C1_MESSAGE_COMPLETE)
-                        break;
-
-                    // if status is  I2C1_MESSAGE_ADDRESS_NO_ACK,
-                    //               or I2C1_DATA_NO_ACK,
-                    // The device may be busy and needs more time for the last
-                    // write so we can retry writing the data, this is why we
-                    // use a while loop here
-
-                    // check for max retry and skip this byte
-                    if (timeOut == SLAVE_I2C_GENERIC_RETRY_MAX)
-                        break;
-                    else
-                        timeOut++;
-
-                }
-
-            }   
-  
-        </code>
-*/
 void MYI2C_Write2LEDBytes(uint8_t slaveDeviceAddress,uint8_t MSBWriteByte,uint8_t LSBWriteByte)
 {
    //<code>

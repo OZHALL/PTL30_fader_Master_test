@@ -17619,7 +17619,7 @@ void SYSTEM_Initialize(void);
 # 83
 void OSCILLATOR_Initialize(void);
 
-# 60 "main.c"
+# 74 "main.c"
 typedef uint16_t adc_result_t;
 
 typedef enum
@@ -17634,6 +17634,16 @@ FADER5 = 0x5,
 FADER6 = 0x6,
 FADER7 = 0x7,
 } adcc_channel_t;
+
+uint8_t iLEDs0_MSB;
+uint8_t iLEDs0_LSB;
+
+uint8_t iLEDs1_MSB;
+uint8_t iLEDs1_LSB;
+
+
+uint8_t wkFaderValue=0;
+volatile uint8_t byteFaderValue[8];
 
 void delay(int);
 
@@ -17674,7 +17684,12 @@ delay(5000);
 return;
 }
 
-# 120
+# 141
+I2C1_MESSAGE_STATUS MYI2C_ReadFaders(uint8_t slaveDeviceAddress);
+void MYI2C_Write2LEDBytes(uint8_t slaveDeviceAddress, uint8_t MSBWriteByte,uint8_t LSBWriteByte);
+void UpdateLEDsFromValue(uint8_t inFaderNum,uint8_t inValue);
+
+# 147
 void MYI2C_Write2LEDBytes(uint8_t slaveDeviceAddress, uint8_t MSBWriteByte,uint8_t LSBWriteByte);
 void main(void)
 {
@@ -17686,16 +17701,18 @@ int faderValue;
 uint8_t fader8bitValue;
 uint8_t prevFader8bitValue;
 
+I2C1_MESSAGE_STATUS readStatus=0;
+
 
 SYSTEM_Initialize();
 
-# 138
+# 167
 (INTCONbits.GIE = 1);
 
 
 (INTCONbits.PEIE = 1);
 
-# 152
+# 181
 faderValue=ADCC_GetSingleConversion(FADER0);
 prevFader8bitValue=faderValue>>2;
 
@@ -17710,6 +17727,7 @@ faderValue=ADCC_GetSingleConversion(FADER0);
 fader8bitValue=faderValue>>2;
 }
 
+faderValue=byteFaderValue[0];
 
 
 if (faderValue> 640){
@@ -17738,12 +17756,19 @@ ODCONC &= 0x1F;
 }
 
 
+readStatus = MYI2C_ReadFaders(I2C_ADDRESS_FADELED0);
 
-iMSByte = iCounter;
-iMSByte = iMSByte>>8;
-iLSByte = iCounter&0xFF;
-MYI2C_Write2LEDBytes(I2C_ADDRESS_FADELED0,iMSByte,iLSByte);
+if(readStatus==I2C1_MESSAGE_COMPLETE)
+{
 
+for(int ndx=0;ndx<8;ndx++){
+UpdateLEDsFromValue(ndx,byteFaderValue[ndx]);
+}
+
+MYI2C_Write2LEDBytes(I2C_ADDRESS_FADELED0,iLEDs0_MSB,iLEDs0_LSB);
+}
+
+# 244
 prevFader8bitValue=fader8bitValue;
 
 
@@ -17752,11 +17777,130 @@ if (fader8bitValue<252)
 delay(1*(255-fader8bitValue));
 }
 }
+void UpdateLEDsFromValue(uint8_t inFaderNum,uint8_t inValue)
+{
+bool wkOnFlag = 0;
+bool wkBrightFlag = 0;
 
+
+if (inValue > 80) wkOnFlag=1;
+if (inValue > 170) wkBrightFlag=1;
+
+switch(inFaderNum)
+{
+case 0 : {
+if(wkOnFlag) { iLEDs0_LSB |= 0b00000010;
+if(wkBrightFlag) {iLEDs0_LSB |= 0b00000001;}else{iLEDs0_LSB &= 0b11111110;};
+}else{ iLEDs0_LSB &= 0b11111100;}
+break;
+}
+case 1 : {
+if(wkOnFlag) { iLEDs0_LSB |= 0b00001000;
+if(wkBrightFlag) {iLEDs0_LSB |= 0b00000100;}else{iLEDs0_LSB &= 0b11111011;};
+}else{ iLEDs0_LSB &= 0b11110011;}
+break;
+}
+case 2 : {
+if(wkOnFlag) { iLEDs0_LSB |= 0b00100000;
+if(wkBrightFlag) {iLEDs0_LSB |= 0b00010000;}else{iLEDs0_LSB &= 0b11101111;};
+}else{ iLEDs0_LSB &= 0b11001111;}
+break;
+}
+case 3 : {
+if(wkOnFlag) { iLEDs0_LSB |= 0b10000000;
+if(wkBrightFlag) {iLEDs0_LSB |= 0b01000000;}else{iLEDs0_LSB &= 0b10111111;};
+}else{ iLEDs0_LSB &= 0b00111111;}
+break;
+}
+case 4 : {
+if(wkOnFlag) { iLEDs0_MSB |= 0b00000010;
+if(wkBrightFlag) {iLEDs0_MSB |= 0b00000001;}else{iLEDs0_MSB &= 0b11111110;};
+}else{ iLEDs0_MSB &= 0b11111100;}
+break;
+}
+case 5 : {
+if(wkOnFlag) { iLEDs0_MSB |= 0b00001000;
+if(wkBrightFlag) {iLEDs0_MSB |= 0b00000100;}else{iLEDs0_MSB &= 0b11111011;};
+}else{ iLEDs0_MSB &= 0b11110011;}
+break;
+}
+case 6 : {
+if(wkOnFlag) { iLEDs0_MSB |= 0b00100000;
+if(wkBrightFlag) {iLEDs0_MSB |= 0b00010000;}else{iLEDs0_MSB &= 0b11101111;};
+}else{ iLEDs0_MSB &= 0b11001111;}
+break;
+}
+case 7 : {
+if(wkOnFlag) { iLEDs0_MSB |= 0b10000000;
+if(wkBrightFlag) {iLEDs0_MSB |= 0b01000000;}else{iLEDs0_MSB &= 0b10111111;};
+}else{ iLEDs0_MSB &= 0b00111111;}
+}
+}
+}
+I2C1_MESSAGE_STATUS MYI2C_ReadFaders(uint8_t slaveDeviceAddress)
+{
+
+int pflag;
+int dataAddress=0;
+
+
+uint8_t pointerByte=0b00100000;
+I2C1_MESSAGE_STATUS status;
+I2C1_TRANSACTION_REQUEST_BLOCK readTRB[2];
+uint8_t writeBuffer[3];
+uint16_t timeOut;
+
+
+
+status = I2C1_MESSAGE_PENDING;
+
+# 335
+timeOut = 0;
+
+while(status != I2C1_MESSAGE_FAIL)
+{
+
+
+
+I2C1_MasterWriteTRBBuild( &readTRB[0],
+&pointerByte,
+1,
+slaveDeviceAddress);
+
+I2C1_MasterReadTRBBuild( &readTRB[1],
+byteFaderValue,
+8,
+slaveDeviceAddress);
+
+
+I2C1_MasterTRBInsert(2, readTRB, &status);
+
+
+while(status == I2C1_MESSAGE_PENDING);
+
+if (status == I2C1_MESSAGE_COMPLETE)
+break;
+
+# 368
+if (timeOut == 100)
+break;
+else
+timeOut++;
+
+}
+
+if (I2C1_MESSAGE_FAIL==status) {
+
+}
+
+return status;
+}
+
+# 447
 void MYI2C_Write2LEDBytes(uint8_t slaveDeviceAddress,uint8_t MSBWriteByte,uint8_t LSBWriteByte)
 {
 
-# 220
+# 458
 uint16_t dataAddress;
 uint8_t sourceData[16] = { 0xA0, 0xA1, 0xA2, 0xA3,
 0xA4, 0xA5, 0xA6, 0xA7,
@@ -17807,7 +17951,7 @@ while(status == I2C1_MESSAGE_PENDING);
 if (status == I2C1_MESSAGE_COMPLETE)
 break;
 
-# 277
+# 515
 if (timeOut == 100)
 break;
 else
