@@ -1,0 +1,1037 @@
+%CMF
+# %PSECTS Section
+# For each object file, details of its psects are enumerated here.
+# The begining of the section is indicated by %PSECTS.  The first
+# line indicates the name of the first object file, e.g.
+#    $foo.obj
+# Each line that follows describes a psect in that object file, until
+# the next object file.  The lines that describe a psect have the
+# format:
+#    <psect name> <class name> <space> <link address> <load addresses> <length> <delta>
+# All addresses and the length are given in unqualified hexadecimal
+# in delta units.  Any other numeric values are decimal.
+%PSECTS
+$C:\Users\OZHall\AppData\Local\Temp\s7b0.obj
+reset_vec CODE 0 0 0 2 2
+end_init CODE 0 20 20 2 2
+config CONFIG 0 8007 8007 5 2
+$dist/default/production\PTL30_fader_Master_test3.production.obj
+cinit CODE 0 22 22 23 2
+text1 CODE 0 2CB 2CB 62 2
+text2 CODE 0 32D 32D 53 2
+text3 CODE 0 44C 44C 1C 2
+text4 CODE 0 500 500 C 2
+text5 CODE 0 3C6 3C6 3E 2
+text6 CODE 0 50C 50C 9 2
+text7 CODE 0 4B3 4B3 17 2
+text8 CODE 0 468 468 1B 2
+text9 CODE 0 257 257 74 2
+text10 CODE 0 404 404 28 2
+text11 CODE 0 42C 42C 20 2
+text12 CODE 0 380 380 46 2
+text13 CODE 0 4CA 4CA 14 2
+text15 CODE 0 45 45 13B 2
+text16 CODE 0 49B 49B 18 2
+text17 CODE 0 4DE 4DE 12 2
+text18 CODE 0 523 523 1 2
+maintext CODE 0 180 180 D7 2
+cstackCOMMON COMMON 1 77 77 7 1
+cstackBANK0 BANK0 1 20 20 41 1
+inittext CODE 0 515 515 6 2
+stringtext1 STRCODE 0 521 521 2 2
+intentry CODE 0 4 4 1C 2
+bssBANK0 BANK0 1 61 61 E 1
+bssBANK1 BANK1 1 B0 B0 4 1
+idataBANK1 CODE 0 4F0 4F0 10 2
+swtext1 CONST 0 483 483 18 2
+dataBANK1 BANK1 1 A0 A0 10 1
+clrtext CODE 0 51B 51B 6 2
+bssCOMMON COMMON 1 70 70 7 1
+# %UNUSED Section
+# This section enumerates the unused ranges of each CLASS. Each entry
+# is described on a single line as follows:
+#    <class name> <range> <delta>
+# Addresses given in the range are in hexadecimal and units of delta.
+%UNUSED
+RAM 6F-6F 1
+RAM B4-EF 1
+RAM 120-16F 1
+RAM 1A0-1EF 1
+RAM 220-26F 1
+RAM 2A0-2EF 1
+RAM 320-36F 1
+RAM 3A0-3EF 1
+RAM 420-46F 1
+RAM 4A0-4EF 1
+RAM 520-56F 1
+RAM 5A0-5EF 1
+RAM 620-64F 1
+BANK0 6F-6F 1
+BANK1 B4-EF 1
+BANK2 120-16F 1
+BANK3 1A0-1EF 1
+BANK4 220-26F 1
+BANK5 2A0-2EF 1
+BANK6 320-36F 1
+BANK7 3A0-3EF 1
+BANK8 420-46F 1
+BANK9 4A0-4EF 1
+CONST 2-3 2
+CONST 524-1FFF 2
+ENTRY 2-3 2
+ENTRY 524-1FFF 2
+IDLOC 8000-8003 2
+SFR10 500-51F 1
+SFR11 580-59F 1
+SFR12 600-61F 1
+SFR13 680-6EF 1
+SFR14 700-76F 1
+SFR15 780-7EF 1
+SFR16 800-86F 1
+SFR17 880-8EF 1
+SFR18 900-96F 1
+SFR19 980-9EF 1
+SFR20 A00-A6F 1
+SFR21 A80-AEF 1
+SFR22 B00-B6F 1
+SFR23 B80-BEF 1
+SFR24 C00-C6F 1
+SFR25 C80-CEF 1
+SFR26 D00-D6F 1
+SFR27 D80-DEF 1
+SFR28 E00-E6F 1
+SFR29 E80-EEF 1
+SFR30 F00-F6F 1
+SFR31 F80-FEF 1
+STACK 2064-23EF 1
+CODE 2-3 2
+CODE 524-1FFF 2
+SFR0 0-1F 1
+SFR1 80-9F 1
+SFR2 100-11F 1
+SFR3 180-19F 1
+SFR4 200-21F 1
+SFR5 280-29F 1
+SFR6 300-31F 1
+SFR7 380-39F 1
+SFR8 400-41F 1
+SFR9 480-49F 1
+BANK10 520-56F 1
+BANK11 5A0-5EF 1
+BANK12 620-64F 1
+BIGRAM 2000-23EF 1
+EEDATA F000-F0FF 2
+STRCODE 2-3 2
+STRCODE 524-1FFF 2
+STRING 2-3 2
+STRING 524-1FFF 2
+# %LINETAB Section
+# This section enumerates the file/line to address mappings.
+# The beginning of the section is indicated by %LINETAB.
+# The first line indicates the name of the first object file, e.g.
+#   $foo.obj
+# Each line that follows describes a single mapping until the next
+# object file.  Mappings have the following format:
+#    <address> <psect name> <class name> ><line number>:<file name>
+# The address is absolute and given given in unqualified hex 
+# in delta units of the psect. All mappings within an object file
+# are in ascending order of addresses.
+# All other numeric values are in decimal.
+%LINETAB
+$dist/default/production\PTL30_fader_Master_test3.production.obj
+22 cinit CODE >6496:C:\Users\OZHall\AppData\Local\Temp\s7b0.
+22 cinit CODE >6499:C:\Users\OZHall\AppData\Local\Temp\s7b0.
+22 cinit CODE >6568:C:\Users\OZHall\AppData\Local\Temp\s7b0.
+23 cinit CODE >6569:C:\Users\OZHall\AppData\Local\Temp\s7b0.
+24 cinit CODE >6570:C:\Users\OZHall\AppData\Local\Temp\s7b0.
+25 cinit CODE >6571:C:\Users\OZHall\AppData\Local\Temp\s7b0.
+26 cinit CODE >6572:C:\Users\OZHall\AppData\Local\Temp\s7b0.
+27 cinit CODE >6573:C:\Users\OZHall\AppData\Local\Temp\s7b0.
+28 cinit CODE >6574:C:\Users\OZHall\AppData\Local\Temp\s7b0.
+29 cinit CODE >6575:C:\Users\OZHall\AppData\Local\Temp\s7b0.
+2A cinit CODE >6576:C:\Users\OZHall\AppData\Local\Temp\s7b0.
+2B cinit CODE >6577:C:\Users\OZHall\AppData\Local\Temp\s7b0.
+2E cinit CODE >6594:C:\Users\OZHall\AppData\Local\Temp\s7b0.
+2F cinit CODE >6595:C:\Users\OZHall\AppData\Local\Temp\s7b0.
+30 cinit CODE >6596:C:\Users\OZHall\AppData\Local\Temp\s7b0.
+31 cinit CODE >6597:C:\Users\OZHall\AppData\Local\Temp\s7b0.
+32 cinit CODE >6598:C:\Users\OZHall\AppData\Local\Temp\s7b0.
+33 cinit CODE >6599:C:\Users\OZHall\AppData\Local\Temp\s7b0.
+34 cinit CODE >6600:C:\Users\OZHall\AppData\Local\Temp\s7b0.
+35 cinit CODE >6604:C:\Users\OZHall\AppData\Local\Temp\s7b0.
+36 cinit CODE >6605:C:\Users\OZHall\AppData\Local\Temp\s7b0.
+37 cinit CODE >6606:C:\Users\OZHall\AppData\Local\Temp\s7b0.
+38 cinit CODE >6607:C:\Users\OZHall\AppData\Local\Temp\s7b0.
+39 cinit CODE >6608:C:\Users\OZHall\AppData\Local\Temp\s7b0.
+3A cinit CODE >6609:C:\Users\OZHall\AppData\Local\Temp\s7b0.
+3C cinit CODE >6613:C:\Users\OZHall\AppData\Local\Temp\s7b0.
+3D cinit CODE >6614:C:\Users\OZHall\AppData\Local\Temp\s7b0.
+3E cinit CODE >6615:C:\Users\OZHall\AppData\Local\Temp\s7b0.
+3F cinit CODE >6616:C:\Users\OZHall\AppData\Local\Temp\s7b0.
+40 cinit CODE >6617:C:\Users\OZHall\AppData\Local\Temp\s7b0.
+41 cinit CODE >6623:C:\Users\OZHall\AppData\Local\Temp\s7b0.
+41 cinit CODE >6625:C:\Users\OZHall\AppData\Local\Temp\s7b0.
+42 cinit CODE >6626:C:\Users\OZHall\AppData\Local\Temp\s7b0.
+43 cinit CODE >6627:C:\Users\OZHall\AppData\Local\Temp\s7b0.
+4 intentry CODE >156:C:\Users\OZHall\MPLABXProjects\PTL30_fader_Master_test3\mcc_generated_files/adcc.c
+4 intentry CODE >51:C:\Users\OZHall\MPLABXProjects\PTL30_fader_Master_test3\mcc_generated_files/interrupt_manager.c
+9 intentry CODE >54:C:\Users\OZHall\MPLABXProjects\PTL30_fader_Master_test3\mcc_generated_files/interrupt_manager.c
+F intentry CODE >56:C:\Users\OZHall\MPLABXProjects\PTL30_fader_Master_test3\mcc_generated_files/interrupt_manager.c
+12 intentry CODE >57:C:\Users\OZHall\MPLABXProjects\PTL30_fader_Master_test3\mcc_generated_files/interrupt_manager.c
+13 intentry CODE >58:C:\Users\OZHall\MPLABXProjects\PTL30_fader_Master_test3\mcc_generated_files/interrupt_manager.c
+19 intentry CODE >60:C:\Users\OZHall\MPLABXProjects\PTL30_fader_Master_test3\mcc_generated_files/interrupt_manager.c
+1B intentry CODE >66:C:\Users\OZHall\MPLABXProjects\PTL30_fader_Master_test3\mcc_generated_files/interrupt_manager.c
+523 text18 CODE >728:C:\Users\OZHall\MPLABXProjects\PTL30_fader_Master_test3\mcc_generated_files/i2c1.c
+523 text18 CODE >731:C:\Users\OZHall\MPLABXProjects\PTL30_fader_Master_test3\mcc_generated_files/i2c1.c
+4DE text17 CODE >563:C:\Users\OZHall\MPLABXProjects\PTL30_fader_Master_test3\mcc_generated_files/i2c1.c
+4DE text17 CODE >567:C:\Users\OZHall\MPLABXProjects\PTL30_fader_Master_test3\mcc_generated_files/i2c1.c
+4E2 text17 CODE >570:C:\Users\OZHall\MPLABXProjects\PTL30_fader_Master_test3\mcc_generated_files/i2c1.c
+4E6 text17 CODE >572:C:\Users\OZHall\MPLABXProjects\PTL30_fader_Master_test3\mcc_generated_files/i2c1.c
+4EB text17 CODE >573:C:\Users\OZHall\MPLABXProjects\PTL30_fader_Master_test3\mcc_generated_files/i2c1.c
+4EC text17 CODE >574:C:\Users\OZHall\MPLABXProjects\PTL30_fader_Master_test3\mcc_generated_files/i2c1.c
+4EC text17 CODE >576:C:\Users\OZHall\MPLABXProjects\PTL30_fader_Master_test3\mcc_generated_files/i2c1.c
+49B text16 CODE >581:C:\Users\OZHall\MPLABXProjects\PTL30_fader_Master_test3\mcc_generated_files/i2c1.c
+49C text16 CODE >584:C:\Users\OZHall\MPLABXProjects\PTL30_fader_Master_test3\mcc_generated_files/i2c1.c
+49E text16 CODE >587:C:\Users\OZHall\MPLABXProjects\PTL30_fader_Master_test3\mcc_generated_files/i2c1.c
+4A5 text16 CODE >590:C:\Users\OZHall\MPLABXProjects\PTL30_fader_Master_test3\mcc_generated_files/i2c1.c
+4B0 text16 CODE >594:C:\Users\OZHall\MPLABXProjects\PTL30_fader_Master_test3\mcc_generated_files/i2c1.c
+4B2 text16 CODE >596:C:\Users\OZHall\MPLABXProjects\PTL30_fader_Master_test3\mcc_generated_files/i2c1.c
+483 swtext1 CONST >259:C:\Users\OZHall\MPLABXProjects\PTL30_fader_Master_test3\mcc_generated_files/i2c1.c
+45 text15 CODE >233:C:\Users\OZHall\MPLABXProjects\PTL30_fader_Master_test3\mcc_generated_files/i2c1.c
+45 text15 CODE >241:C:\Users\OZHall\MPLABXProjects\PTL30_fader_Master_test3\mcc_generated_files/i2c1.c
+47 text15 CODE >245:C:\Users\OZHall\MPLABXProjects\PTL30_fader_Master_test3\mcc_generated_files/i2c1.c
+4A text15 CODE >248:C:\Users\OZHall\MPLABXProjects\PTL30_fader_Master_test3\mcc_generated_files/i2c1.c
+4B text15 CODE >249:C:\Users\OZHall\MPLABXProjects\PTL30_fader_Master_test3\mcc_generated_files/i2c1.c
+4D text15 CODE >250:C:\Users\OZHall\MPLABXProjects\PTL30_fader_Master_test3\mcc_generated_files/i2c1.c
+56 text15 CODE >253:C:\Users\OZHall\MPLABXProjects\PTL30_fader_Master_test3\mcc_generated_files/i2c1.c
+57 text15 CODE >255:C:\Users\OZHall\MPLABXProjects\PTL30_fader_Master_test3\mcc_generated_files/i2c1.c
+58 text15 CODE >261:C:\Users\OZHall\MPLABXProjects\PTL30_fader_Master_test3\mcc_generated_files/i2c1.c
+58 text15 CODE >263:C:\Users\OZHall\MPLABXProjects\PTL30_fader_Master_test3\mcc_generated_files/i2c1.c
+5A text15 CODE >266:C:\Users\OZHall\MPLABXProjects\PTL30_fader_Master_test3\mcc_generated_files/i2c1.c
+5E text15 CODE >267:C:\Users\OZHall\MPLABXProjects\PTL30_fader_Master_test3\mcc_generated_files/i2c1.c
+65 text15 CODE >268:C:\Users\OZHall\MPLABXProjects\PTL30_fader_Master_test3\mcc_generated_files/i2c1.c
+6A text15 CODE >270:C:\Users\OZHall\MPLABXProjects\PTL30_fader_Master_test3\mcc_generated_files/i2c1.c
+6E text15 CODE >273:C:\Users\OZHall\MPLABXProjects\PTL30_fader_Master_test3\mcc_generated_files/i2c1.c
+72 text15 CODE >276:C:\Users\OZHall\MPLABXProjects\PTL30_fader_Master_test3\mcc_generated_files/i2c1.c
+76 text15 CODE >281:C:\Users\OZHall\MPLABXProjects\PTL30_fader_Master_test3\mcc_generated_files/i2c1.c
+77 text15 CODE >284:C:\Users\OZHall\MPLABXProjects\PTL30_fader_Master_test3\mcc_generated_files/i2c1.c
+7A text15 CODE >287:C:\Users\OZHall\MPLABXProjects\PTL30_fader_Master_test3\mcc_generated_files/i2c1.c
+7B text15 CODE >291:C:\Users\OZHall\MPLABXProjects\PTL30_fader_Master_test3\mcc_generated_files/i2c1.c
+7D text15 CODE >294:C:\Users\OZHall\MPLABXProjects\PTL30_fader_Master_test3\mcc_generated_files/i2c1.c
+82 text15 CODE >297:C:\Users\OZHall\MPLABXProjects\PTL30_fader_Master_test3\mcc_generated_files/i2c1.c
+83 text15 CODE >299:C:\Users\OZHall\MPLABXProjects\PTL30_fader_Master_test3\mcc_generated_files/i2c1.c
+83 text15 CODE >304:C:\Users\OZHall\MPLABXProjects\PTL30_fader_Master_test3\mcc_generated_files/i2c1.c
+85 text15 CODE >307:C:\Users\OZHall\MPLABXProjects\PTL30_fader_Master_test3\mcc_generated_files/i2c1.c
+8A text15 CODE >309:C:\Users\OZHall\MPLABXProjects\PTL30_fader_Master_test3\mcc_generated_files/i2c1.c
+8B text15 CODE >311:C:\Users\OZHall\MPLABXProjects\PTL30_fader_Master_test3\mcc_generated_files/i2c1.c
+8B text15 CODE >313:C:\Users\OZHall\MPLABXProjects\PTL30_fader_Master_test3\mcc_generated_files/i2c1.c
+8E text15 CODE >315:C:\Users\OZHall\MPLABXProjects\PTL30_fader_Master_test3\mcc_generated_files/i2c1.c
+93 text15 CODE >316:C:\Users\OZHall\MPLABXProjects\PTL30_fader_Master_test3\mcc_generated_files/i2c1.c
+96 text15 CODE >317:C:\Users\OZHall\MPLABXProjects\PTL30_fader_Master_test3\mcc_generated_files/i2c1.c
+97 text15 CODE >321:C:\Users\OZHall\MPLABXProjects\PTL30_fader_Master_test3\mcc_generated_files/i2c1.c
+A0 text15 CODE >324:C:\Users\OZHall\MPLABXProjects\PTL30_fader_Master_test3\mcc_generated_files/i2c1.c
+A2 text15 CODE >328:C:\Users\OZHall\MPLABXProjects\PTL30_fader_Master_test3\mcc_generated_files/i2c1.c
+A7 text15 CODE >329:C:\Users\OZHall\MPLABXProjects\PTL30_fader_Master_test3\mcc_generated_files/i2c1.c
+A8 text15 CODE >333:C:\Users\OZHall\MPLABXProjects\PTL30_fader_Master_test3\mcc_generated_files/i2c1.c
+AD text15 CODE >337:C:\Users\OZHall\MPLABXProjects\PTL30_fader_Master_test3\mcc_generated_files/i2c1.c
+AE text15 CODE >339:C:\Users\OZHall\MPLABXProjects\PTL30_fader_Master_test3\mcc_generated_files/i2c1.c
+AE text15 CODE >341:C:\Users\OZHall\MPLABXProjects\PTL30_fader_Master_test3\mcc_generated_files/i2c1.c
+B1 text15 CODE >343:C:\Users\OZHall\MPLABXProjects\PTL30_fader_Master_test3\mcc_generated_files/i2c1.c
+B6 text15 CODE >344:C:\Users\OZHall\MPLABXProjects\PTL30_fader_Master_test3\mcc_generated_files/i2c1.c
+B9 text15 CODE >345:C:\Users\OZHall\MPLABXProjects\PTL30_fader_Master_test3\mcc_generated_files/i2c1.c
+BA text15 CODE >346:C:\Users\OZHall\MPLABXProjects\PTL30_fader_Master_test3\mcc_generated_files/i2c1.c
+BA text15 CODE >350:C:\Users\OZHall\MPLABXProjects\PTL30_fader_Master_test3\mcc_generated_files/i2c1.c
+BB text15 CODE >354:C:\Users\OZHall\MPLABXProjects\PTL30_fader_Master_test3\mcc_generated_files/i2c1.c
+CE text15 CODE >357:C:\Users\OZHall\MPLABXProjects\PTL30_fader_Master_test3\mcc_generated_files/i2c1.c
+CF text15 CODE >360:C:\Users\OZHall\MPLABXProjects\PTL30_fader_Master_test3\mcc_generated_files/i2c1.c
+D2 text15 CODE >363:C:\Users\OZHall\MPLABXProjects\PTL30_fader_Master_test3\mcc_generated_files/i2c1.c
+D6 text15 CODE >366:C:\Users\OZHall\MPLABXProjects\PTL30_fader_Master_test3\mcc_generated_files/i2c1.c
+D7 text15 CODE >381:C:\Users\OZHall\MPLABXProjects\PTL30_fader_Master_test3\mcc_generated_files/i2c1.c
+DA text15 CODE >384:C:\Users\OZHall\MPLABXProjects\PTL30_fader_Master_test3\mcc_generated_files/i2c1.c
+E1 text15 CODE >385:C:\Users\OZHall\MPLABXProjects\PTL30_fader_Master_test3\mcc_generated_files/i2c1.c
+E6 text15 CODE >386:C:\Users\OZHall\MPLABXProjects\PTL30_fader_Master_test3\mcc_generated_files/i2c1.c
+EB text15 CODE >412:C:\Users\OZHall\MPLABXProjects\PTL30_fader_Master_test3\mcc_generated_files/i2c1.c
+EE text15 CODE >413:C:\Users\OZHall\MPLABXProjects\PTL30_fader_Master_test3\mcc_generated_files/i2c1.c
+F0 text15 CODE >416:C:\Users\OZHall\MPLABXProjects\PTL30_fader_Master_test3\mcc_generated_files/i2c1.c
+F5 text15 CODE >417:C:\Users\OZHall\MPLABXProjects\PTL30_fader_Master_test3\mcc_generated_files/i2c1.c
+F6 text15 CODE >421:C:\Users\OZHall\MPLABXProjects\PTL30_fader_Master_test3\mcc_generated_files/i2c1.c
+FB text15 CODE >424:C:\Users\OZHall\MPLABXProjects\PTL30_fader_Master_test3\mcc_generated_files/i2c1.c
+FC text15 CODE >426:C:\Users\OZHall\MPLABXProjects\PTL30_fader_Master_test3\mcc_generated_files/i2c1.c
+FC text15 CODE >429:C:\Users\OZHall\MPLABXProjects\PTL30_fader_Master_test3\mcc_generated_files/i2c1.c
+FF text15 CODE >432:C:\Users\OZHall\MPLABXProjects\PTL30_fader_Master_test3\mcc_generated_files/i2c1.c
+104 text15 CODE >435:C:\Users\OZHall\MPLABXProjects\PTL30_fader_Master_test3\mcc_generated_files/i2c1.c
+106 text15 CODE >438:C:\Users\OZHall\MPLABXProjects\PTL30_fader_Master_test3\mcc_generated_files/i2c1.c
+109 text15 CODE >440:C:\Users\OZHall\MPLABXProjects\PTL30_fader_Master_test3\mcc_generated_files/i2c1.c
+10A text15 CODE >444:C:\Users\OZHall\MPLABXProjects\PTL30_fader_Master_test3\mcc_generated_files/i2c1.c
+10F text15 CODE >449:C:\Users\OZHall\MPLABXProjects\PTL30_fader_Master_test3\mcc_generated_files/i2c1.c
+113 text15 CODE >452:C:\Users\OZHall\MPLABXProjects\PTL30_fader_Master_test3\mcc_generated_files/i2c1.c
+117 text15 CODE >454:C:\Users\OZHall\MPLABXProjects\PTL30_fader_Master_test3\mcc_generated_files/i2c1.c
+11A text15 CODE >455:C:\Users\OZHall\MPLABXProjects\PTL30_fader_Master_test3\mcc_generated_files/i2c1.c
+11B text15 CODE >456:C:\Users\OZHall\MPLABXProjects\PTL30_fader_Master_test3\mcc_generated_files/i2c1.c
+11B text15 CODE >464:C:\Users\OZHall\MPLABXProjects\PTL30_fader_Master_test3\mcc_generated_files/i2c1.c
+11D text15 CODE >467:C:\Users\OZHall\MPLABXProjects\PTL30_fader_Master_test3\mcc_generated_files/i2c1.c
+122 text15 CODE >470:C:\Users\OZHall\MPLABXProjects\PTL30_fader_Master_test3\mcc_generated_files/i2c1.c
+123 text15 CODE >474:C:\Users\OZHall\MPLABXProjects\PTL30_fader_Master_test3\mcc_generated_files/i2c1.c
+12D text15 CODE >477:C:\Users\OZHall\MPLABXProjects\PTL30_fader_Master_test3\mcc_generated_files/i2c1.c
+12E text15 CODE >479:C:\Users\OZHall\MPLABXProjects\PTL30_fader_Master_test3\mcc_generated_files/i2c1.c
+12E text15 CODE >482:C:\Users\OZHall\MPLABXProjects\PTL30_fader_Master_test3\mcc_generated_files/i2c1.c
+131 text15 CODE >486:C:\Users\OZHall\MPLABXProjects\PTL30_fader_Master_test3\mcc_generated_files/i2c1.c
+136 text15 CODE >489:C:\Users\OZHall\MPLABXProjects\PTL30_fader_Master_test3\mcc_generated_files/i2c1.c
+139 text15 CODE >492:C:\Users\OZHall\MPLABXProjects\PTL30_fader_Master_test3\mcc_generated_files/i2c1.c
+13B text15 CODE >493:C:\Users\OZHall\MPLABXProjects\PTL30_fader_Master_test3\mcc_generated_files/i2c1.c
+13C text15 CODE >494:C:\Users\OZHall\MPLABXProjects\PTL30_fader_Master_test3\mcc_generated_files/i2c1.c
+13C text15 CODE >496:C:\Users\OZHall\MPLABXProjects\PTL30_fader_Master_test3\mcc_generated_files/i2c1.c
+13D text15 CODE >497:C:\Users\OZHall\MPLABXProjects\PTL30_fader_Master_test3\mcc_generated_files/i2c1.c
+142 text15 CODE >499:C:\Users\OZHall\MPLABXProjects\PTL30_fader_Master_test3\mcc_generated_files/i2c1.c
+143 text15 CODE >506:C:\Users\OZHall\MPLABXProjects\PTL30_fader_Master_test3\mcc_generated_files/i2c1.c
+147 text15 CODE >509:C:\Users\OZHall\MPLABXProjects\PTL30_fader_Master_test3\mcc_generated_files/i2c1.c
+149 text15 CODE >511:C:\Users\OZHall\MPLABXProjects\PTL30_fader_Master_test3\mcc_generated_files/i2c1.c
+14A text15 CODE >516:C:\Users\OZHall\MPLABXProjects\PTL30_fader_Master_test3\mcc_generated_files/i2c1.c
+156 text15 CODE >519:C:\Users\OZHall\MPLABXProjects\PTL30_fader_Master_test3\mcc_generated_files/i2c1.c
+15A text15 CODE >526:C:\Users\OZHall\MPLABXProjects\PTL30_fader_Master_test3\mcc_generated_files/i2c1.c
+15B text15 CODE >529:C:\Users\OZHall\MPLABXProjects\PTL30_fader_Master_test3\mcc_generated_files/i2c1.c
+160 text15 CODE >530:C:\Users\OZHall\MPLABXProjects\PTL30_fader_Master_test3\mcc_generated_files/i2c1.c
+161 text15 CODE >531:C:\Users\OZHall\MPLABXProjects\PTL30_fader_Master_test3\mcc_generated_files/i2c1.c
+161 text15 CODE >536:C:\Users\OZHall\MPLABXProjects\PTL30_fader_Master_test3\mcc_generated_files/i2c1.c
+162 text15 CODE >538:C:\Users\OZHall\MPLABXProjects\PTL30_fader_Master_test3\mcc_generated_files/i2c1.c
+164 text15 CODE >542:C:\Users\OZHall\MPLABXProjects\PTL30_fader_Master_test3\mcc_generated_files/i2c1.c
+166 text15 CODE >543:C:\Users\OZHall\MPLABXProjects\PTL30_fader_Master_test3\mcc_generated_files/i2c1.c
+167 text15 CODE >549:C:\Users\OZHall\MPLABXProjects\PTL30_fader_Master_test3\mcc_generated_files/i2c1.c
+16A text15 CODE >550:C:\Users\OZHall\MPLABXProjects\PTL30_fader_Master_test3\mcc_generated_files/i2c1.c
+16B text15 CODE >556:C:\Users\OZHall\MPLABXProjects\PTL30_fader_Master_test3\mcc_generated_files/i2c1.c
+170 text15 CODE >557:C:\Users\OZHall\MPLABXProjects\PTL30_fader_Master_test3\mcc_generated_files/i2c1.c
+173 text15 CODE >560:C:\Users\OZHall\MPLABXProjects\PTL30_fader_Master_test3\mcc_generated_files/i2c1.c
+174 text15 CODE >259:C:\Users\OZHall\MPLABXProjects\PTL30_fader_Master_test3\mcc_generated_files/i2c1.c
+17F text15 CODE >561:C:\Users\OZHall\MPLABXProjects\PTL30_fader_Master_test3\mcc_generated_files/i2c1.c
+4CA text13 CODE >132:C:\Users\OZHall\MPLABXProjects\PTL30_fader_Master_test3\mcc_generated_files/adcc.c
+4CC text13 CODE >135:C:\Users\OZHall\MPLABXProjects\PTL30_fader_Master_test3\mcc_generated_files/adcc.c
+4CF text13 CODE >138:C:\Users\OZHall\MPLABXProjects\PTL30_fader_Master_test3\mcc_generated_files/adcc.c
+4D0 text13 CODE >141:C:\Users\OZHall\MPLABXProjects\PTL30_fader_Master_test3\mcc_generated_files/adcc.c
+4D1 text13 CODE >144:C:\Users\OZHall\MPLABXProjects\PTL30_fader_Master_test3\mcc_generated_files/adcc.c
+4D2 text13 CODE >147:C:\Users\OZHall\MPLABXProjects\PTL30_fader_Master_test3\mcc_generated_files/adcc.c
+4D3 text13 CODE >150:C:\Users\OZHall\MPLABXProjects\PTL30_fader_Master_test3\mcc_generated_files/adcc.c
+4D3 text13 CODE >152:C:\Users\OZHall\MPLABXProjects\PTL30_fader_Master_test3\mcc_generated_files/adcc.c
+4D6 text13 CODE >155:C:\Users\OZHall\MPLABXProjects\PTL30_fader_Master_test3\mcc_generated_files/adcc.c
+380 text12 CODE >641:C:\Users\OZHall\MPLABXProjects\PTL30_fader_Master_test3\mcc_generated_files/i2c1.c
+380 text12 CODE >642:C:\Users\OZHall\MPLABXProjects\PTL30_fader_Master_test3\mcc_generated_files/i2c1.c
+382 text12 CODE >648:C:\Users\OZHall\MPLABXProjects\PTL30_fader_Master_test3\mcc_generated_files/i2c1.c
+384 text12 CODE >650:C:\Users\OZHall\MPLABXProjects\PTL30_fader_Master_test3\mcc_generated_files/i2c1.c
+38B text12 CODE >652:C:\Users\OZHall\MPLABXProjects\PTL30_fader_Master_test3\mcc_generated_files/i2c1.c
+392 text12 CODE >653:C:\Users\OZHall\MPLABXProjects\PTL30_fader_Master_test3\mcc_generated_files/i2c1.c
+399 text12 CODE >654:C:\Users\OZHall\MPLABXProjects\PTL30_fader_Master_test3\mcc_generated_files/i2c1.c
+3A1 text12 CODE >655:C:\Users\OZHall\MPLABXProjects\PTL30_fader_Master_test3\mcc_generated_files/i2c1.c
+3A5 text12 CODE >658:C:\Users\OZHall\MPLABXProjects\PTL30_fader_Master_test3\mcc_generated_files/i2c1.c
+3A9 text12 CODE >661:C:\Users\OZHall\MPLABXProjects\PTL30_fader_Master_test3\mcc_generated_files/i2c1.c
+3AD text12 CODE >666:C:\Users\OZHall\MPLABXProjects\PTL30_fader_Master_test3\mcc_generated_files/i2c1.c
+3AE text12 CODE >669:C:\Users\OZHall\MPLABXProjects\PTL30_fader_Master_test3\mcc_generated_files/i2c1.c
+3B2 text12 CODE >672:C:\Users\OZHall\MPLABXProjects\PTL30_fader_Master_test3\mcc_generated_files/i2c1.c
+3B3 text12 CODE >675:C:\Users\OZHall\MPLABXProjects\PTL30_fader_Master_test3\mcc_generated_files/i2c1.c
+3B4 text12 CODE >678:C:\Users\OZHall\MPLABXProjects\PTL30_fader_Master_test3\mcc_generated_files/i2c1.c
+3B9 text12 CODE >682:C:\Users\OZHall\MPLABXProjects\PTL30_fader_Master_test3\mcc_generated_files/i2c1.c
+3C0 text12 CODE >684:C:\Users\OZHall\MPLABXProjects\PTL30_fader_Master_test3\mcc_generated_files/i2c1.c
+3C3 text12 CODE >688:C:\Users\OZHall\MPLABXProjects\PTL30_fader_Master_test3\mcc_generated_files/i2c1.c
+42C text11 CODE >707:C:\Users\OZHall\MPLABXProjects\PTL30_fader_Master_test3\mcc_generated_files/i2c1.c
+42C text11 CODE >708:C:\Users\OZHall\MPLABXProjects\PTL30_fader_Master_test3\mcc_generated_files/i2c1.c
+42E text11 CODE >713:C:\Users\OZHall\MPLABXProjects\PTL30_fader_Master_test3\mcc_generated_files/i2c1.c
+43B text11 CODE >714:C:\Users\OZHall\MPLABXProjects\PTL30_fader_Master_test3\mcc_generated_files/i2c1.c
+443 text11 CODE >715:C:\Users\OZHall\MPLABXProjects\PTL30_fader_Master_test3\mcc_generated_files/i2c1.c
+44B text11 CODE >716:C:\Users\OZHall\MPLABXProjects\PTL30_fader_Master_test3\mcc_generated_files/i2c1.c
+404 text10 CODE >598:C:\Users\OZHall\MPLABXProjects\PTL30_fader_Master_test3\mcc_generated_files/i2c1.c
+404 text10 CODE >599:C:\Users\OZHall\MPLABXProjects\PTL30_fader_Master_test3\mcc_generated_files/i2c1.c
+406 text10 CODE >607:C:\Users\OZHall\MPLABXProjects\PTL30_fader_Master_test3\mcc_generated_files/i2c1.c
+408 text10 CODE >609:C:\Users\OZHall\MPLABXProjects\PTL30_fader_Master_test3\mcc_generated_files/i2c1.c
+418 text10 CODE >610:C:\Users\OZHall\MPLABXProjects\PTL30_fader_Master_test3\mcc_generated_files/i2c1.c
+424 text10 CODE >611:C:\Users\OZHall\MPLABXProjects\PTL30_fader_Master_test3\mcc_generated_files/i2c1.c
+425 text10 CODE >614:C:\Users\OZHall\MPLABXProjects\PTL30_fader_Master_test3\mcc_generated_files/i2c1.c
+257 text9 CODE >209:C:\Users\OZHall\MPLABXProjects\PTL30_fader_Master_test3\main.c
+259 text9 CODE >224:C:\Users\OZHall\MPLABXProjects\PTL30_fader_Master_test3\main.c
+267 text9 CODE >231:C:\Users\OZHall\MPLABXProjects\PTL30_fader_Master_test3\main.c
+26B text9 CODE >233:C:\Users\OZHall\MPLABXProjects\PTL30_fader_Master_test3\main.c
+26F text9 CODE >235:C:\Users\OZHall\MPLABXProjects\PTL30_fader_Master_test3\main.c
+271 text9 CODE >236:C:\Users\OZHall\MPLABXProjects\PTL30_fader_Master_test3\main.c
+275 text9 CODE >237:C:\Users\OZHall\MPLABXProjects\PTL30_fader_Master_test3\main.c
+279 text9 CODE >241:C:\Users\OZHall\MPLABXProjects\PTL30_fader_Master_test3\main.c
+27A text9 CODE >243:C:\Users\OZHall\MPLABXProjects\PTL30_fader_Master_test3\main.c
+284 text9 CODE >247:C:\Users\OZHall\MPLABXProjects\PTL30_fader_Master_test3\main.c
+288 text9 CODE >249:C:\Users\OZHall\MPLABXProjects\PTL30_fader_Master_test3\main.c
+28C text9 CODE >250:C:\Users\OZHall\MPLABXProjects\PTL30_fader_Master_test3\main.c
+290 text9 CODE >255:C:\Users\OZHall\MPLABXProjects\PTL30_fader_Master_test3\main.c
+292 text9 CODE >256:C:\Users\OZHall\MPLABXProjects\PTL30_fader_Master_test3\main.c
+295 text9 CODE >262:C:\Users\OZHall\MPLABXProjects\PTL30_fader_Master_test3\main.c
+2A8 text9 CODE >265:C:\Users\OZHall\MPLABXProjects\PTL30_fader_Master_test3\main.c
+2AD text9 CODE >267:C:\Users\OZHall\MPLABXProjects\PTL30_fader_Master_test3\main.c
+2B0 text9 CODE >277:C:\Users\OZHall\MPLABXProjects\PTL30_fader_Master_test3\main.c
+2B5 text9 CODE >280:C:\Users\OZHall\MPLABXProjects\PTL30_fader_Master_test3\main.c
+2B9 text9 CODE >256:C:\Users\OZHall\MPLABXProjects\PTL30_fader_Master_test3\main.c
+2BA text9 CODE >283:C:\Users\OZHall\MPLABXProjects\PTL30_fader_Master_test3\main.c
+2BD text9 CODE >287:C:\Users\OZHall\MPLABXProjects\PTL30_fader_Master_test3\main.c
+2C1 text9 CODE >243:C:\Users\OZHall\MPLABXProjects\PTL30_fader_Master_test3\main.c
+2C6 text9 CODE >289:C:\Users\OZHall\MPLABXProjects\PTL30_fader_Master_test3\main.c
+2CA text9 CODE >293:C:\Users\OZHall\MPLABXProjects\PTL30_fader_Master_test3\main.c
+468 text8 CODE >62:C:\Users\OZHall\MPLABXProjects\PTL30_fader_Master_test3\mcc_generated_files/adcc.c
+468 text8 CODE >66:C:\Users\OZHall\MPLABXProjects\PTL30_fader_Master_test3\mcc_generated_files/adcc.c
+46A text8 CODE >68:C:\Users\OZHall\MPLABXProjects\PTL30_fader_Master_test3\mcc_generated_files/adcc.c
+46C text8 CODE >70:C:\Users\OZHall\MPLABXProjects\PTL30_fader_Master_test3\mcc_generated_files/adcc.c
+46D text8 CODE >72:C:\Users\OZHall\MPLABXProjects\PTL30_fader_Master_test3\mcc_generated_files/adcc.c
+46E text8 CODE >74:C:\Users\OZHall\MPLABXProjects\PTL30_fader_Master_test3\mcc_generated_files/adcc.c
+46F text8 CODE >76:C:\Users\OZHall\MPLABXProjects\PTL30_fader_Master_test3\mcc_generated_files/adcc.c
+471 text8 CODE >78:C:\Users\OZHall\MPLABXProjects\PTL30_fader_Master_test3\mcc_generated_files/adcc.c
+472 text8 CODE >80:C:\Users\OZHall\MPLABXProjects\PTL30_fader_Master_test3\mcc_generated_files/adcc.c
+473 text8 CODE >82:C:\Users\OZHall\MPLABXProjects\PTL30_fader_Master_test3\mcc_generated_files/adcc.c
+474 text8 CODE >84:C:\Users\OZHall\MPLABXProjects\PTL30_fader_Master_test3\mcc_generated_files/adcc.c
+476 text8 CODE >86:C:\Users\OZHall\MPLABXProjects\PTL30_fader_Master_test3\mcc_generated_files/adcc.c
+477 text8 CODE >88:C:\Users\OZHall\MPLABXProjects\PTL30_fader_Master_test3\mcc_generated_files/adcc.c
+479 text8 CODE >90:C:\Users\OZHall\MPLABXProjects\PTL30_fader_Master_test3\mcc_generated_files/adcc.c
+47A text8 CODE >92:C:\Users\OZHall\MPLABXProjects\PTL30_fader_Master_test3\mcc_generated_files/adcc.c
+47B text8 CODE >94:C:\Users\OZHall\MPLABXProjects\PTL30_fader_Master_test3\mcc_generated_files/adcc.c
+47C text8 CODE >96:C:\Users\OZHall\MPLABXProjects\PTL30_fader_Master_test3\mcc_generated_files/adcc.c
+47D text8 CODE >98:C:\Users\OZHall\MPLABXProjects\PTL30_fader_Master_test3\mcc_generated_files/adcc.c
+47E text8 CODE >100:C:\Users\OZHall\MPLABXProjects\PTL30_fader_Master_test3\mcc_generated_files/adcc.c
+47F text8 CODE >103:C:\Users\OZHall\MPLABXProjects\PTL30_fader_Master_test3\mcc_generated_files/adcc.c
+482 text8 CODE >106:C:\Users\OZHall\MPLABXProjects\PTL30_fader_Master_test3\mcc_generated_files/adcc.c
+4B3 text7 CODE >198:C:\Users\OZHall\MPLABXProjects\PTL30_fader_Master_test3\mcc_generated_files/i2c1.c
+4B3 text7 CODE >200:C:\Users\OZHall\MPLABXProjects\PTL30_fader_Master_test3\mcc_generated_files/i2c1.c
+4B8 text7 CODE >201:C:\Users\OZHall\MPLABXProjects\PTL30_fader_Master_test3\mcc_generated_files/i2c1.c
+4BC text7 CODE >202:C:\Users\OZHall\MPLABXProjects\PTL30_fader_Master_test3\mcc_generated_files/i2c1.c
+4BD text7 CODE >203:C:\Users\OZHall\MPLABXProjects\PTL30_fader_Master_test3\mcc_generated_files/i2c1.c
+4BE text7 CODE >205:C:\Users\OZHall\MPLABXProjects\PTL30_fader_Master_test3\mcc_generated_files/i2c1.c
+4BF text7 CODE >208:C:\Users\OZHall\MPLABXProjects\PTL30_fader_Master_test3\mcc_generated_files/i2c1.c
+4C1 text7 CODE >210:C:\Users\OZHall\MPLABXProjects\PTL30_fader_Master_test3\mcc_generated_files/i2c1.c
+4C3 text7 CODE >212:C:\Users\OZHall\MPLABXProjects\PTL30_fader_Master_test3\mcc_generated_files/i2c1.c
+4C4 text7 CODE >214:C:\Users\OZHall\MPLABXProjects\PTL30_fader_Master_test3\mcc_generated_files/i2c1.c
+4C6 text7 CODE >218:C:\Users\OZHall\MPLABXProjects\PTL30_fader_Master_test3\mcc_generated_files/i2c1.c
+4C8 text7 CODE >220:C:\Users\OZHall\MPLABXProjects\PTL30_fader_Master_test3\mcc_generated_files/i2c1.c
+4C9 text7 CODE >222:C:\Users\OZHall\MPLABXProjects\PTL30_fader_Master_test3\mcc_generated_files/i2c1.c
+50C text6 CODE >92:C:\Users\OZHall\MPLABXProjects\PTL30_fader_Master_test3\mcc_generated_files/mcc.c
+50C text6 CODE >95:C:\Users\OZHall\MPLABXProjects\PTL30_fader_Master_test3\mcc_generated_files/mcc.c
+50F text6 CODE >97:C:\Users\OZHall\MPLABXProjects\PTL30_fader_Master_test3\mcc_generated_files/mcc.c
+510 text6 CODE >99:C:\Users\OZHall\MPLABXProjects\PTL30_fader_Master_test3\mcc_generated_files/mcc.c
+511 text6 CODE >101:C:\Users\OZHall\MPLABXProjects\PTL30_fader_Master_test3\mcc_generated_files/mcc.c
+513 text6 CODE >103:C:\Users\OZHall\MPLABXProjects\PTL30_fader_Master_test3\mcc_generated_files/mcc.c
+514 text6 CODE >104:C:\Users\OZHall\MPLABXProjects\PTL30_fader_Master_test3\mcc_generated_files/mcc.c
+3C6 text5 CODE >52:C:\Users\OZHall\MPLABXProjects\PTL30_fader_Master_test3\mcc_generated_files/pin_manager.c
+3C6 text5 CODE >57:C:\Users\OZHall\MPLABXProjects\PTL30_fader_Master_test3\mcc_generated_files/pin_manager.c
+3C8 text5 CODE >58:C:\Users\OZHall\MPLABXProjects\PTL30_fader_Master_test3\mcc_generated_files/pin_manager.c
+3C9 text5 CODE >59:C:\Users\OZHall\MPLABXProjects\PTL30_fader_Master_test3\mcc_generated_files/pin_manager.c
+3CA text5 CODE >64:C:\Users\OZHall\MPLABXProjects\PTL30_fader_Master_test3\mcc_generated_files/pin_manager.c
+3CC text5 CODE >65:C:\Users\OZHall\MPLABXProjects\PTL30_fader_Master_test3\mcc_generated_files/pin_manager.c
+3CE text5 CODE >66:C:\Users\OZHall\MPLABXProjects\PTL30_fader_Master_test3\mcc_generated_files/pin_manager.c
+3D0 text5 CODE >71:C:\Users\OZHall\MPLABXProjects\PTL30_fader_Master_test3\mcc_generated_files/pin_manager.c
+3D3 text5 CODE >72:C:\Users\OZHall\MPLABXProjects\PTL30_fader_Master_test3\mcc_generated_files/pin_manager.c
+3D5 text5 CODE >73:C:\Users\OZHall\MPLABXProjects\PTL30_fader_Master_test3\mcc_generated_files/pin_manager.c
+3D7 text5 CODE >78:C:\Users\OZHall\MPLABXProjects\PTL30_fader_Master_test3\mcc_generated_files/pin_manager.c
+3D8 text5 CODE >79:C:\Users\OZHall\MPLABXProjects\PTL30_fader_Master_test3\mcc_generated_files/pin_manager.c
+3D9 text5 CODE >80:C:\Users\OZHall\MPLABXProjects\PTL30_fader_Master_test3\mcc_generated_files/pin_manager.c
+3DA text5 CODE >81:C:\Users\OZHall\MPLABXProjects\PTL30_fader_Master_test3\mcc_generated_files/pin_manager.c
+3DB text5 CODE >86:C:\Users\OZHall\MPLABXProjects\PTL30_fader_Master_test3\mcc_generated_files/pin_manager.c
+3DC text5 CODE >87:C:\Users\OZHall\MPLABXProjects\PTL30_fader_Master_test3\mcc_generated_files/pin_manager.c
+3DD text5 CODE >88:C:\Users\OZHall\MPLABXProjects\PTL30_fader_Master_test3\mcc_generated_files/pin_manager.c
+3DE text5 CODE >95:C:\Users\OZHall\MPLABXProjects\PTL30_fader_Master_test3\mcc_generated_files/pin_manager.c
+3E3 text5 CODE >96:C:\Users\OZHall\MPLABXProjects\PTL30_fader_Master_test3\mcc_generated_files/pin_manager.c
+3E4 text5 CODE >97:C:\Users\OZHall\MPLABXProjects\PTL30_fader_Master_test3\mcc_generated_files/pin_manager.c
+3E7 text5 CODE >98:C:\Users\OZHall\MPLABXProjects\PTL30_fader_Master_test3\mcc_generated_files/pin_manager.c
+3E9 text5 CODE >99:C:\Users\OZHall\MPLABXProjects\PTL30_fader_Master_test3\mcc_generated_files/pin_manager.c
+3EA text5 CODE >101:C:\Users\OZHall\MPLABXProjects\PTL30_fader_Master_test3\mcc_generated_files/pin_manager.c
+3EE text5 CODE >102:C:\Users\OZHall\MPLABXProjects\PTL30_fader_Master_test3\mcc_generated_files/pin_manager.c
+3F2 text5 CODE >103:C:\Users\OZHall\MPLABXProjects\PTL30_fader_Master_test3\mcc_generated_files/pin_manager.c
+3F5 text5 CODE >104:C:\Users\OZHall\MPLABXProjects\PTL30_fader_Master_test3\mcc_generated_files/pin_manager.c
+3F7 text5 CODE >106:C:\Users\OZHall\MPLABXProjects\PTL30_fader_Master_test3\mcc_generated_files/pin_manager.c
+3FA text5 CODE >107:C:\Users\OZHall\MPLABXProjects\PTL30_fader_Master_test3\mcc_generated_files/pin_manager.c
+3FC text5 CODE >108:C:\Users\OZHall\MPLABXProjects\PTL30_fader_Master_test3\mcc_generated_files/pin_manager.c
+3FD text5 CODE >110:C:\Users\OZHall\MPLABXProjects\PTL30_fader_Master_test3\mcc_generated_files/pin_manager.c
+403 text5 CODE >111:C:\Users\OZHall\MPLABXProjects\PTL30_fader_Master_test3\mcc_generated_files/pin_manager.c
+500 text4 CODE >83:C:\Users\OZHall\MPLABXProjects\PTL30_fader_Master_test3\mcc_generated_files/mcc.c
+500 text4 CODE >86:C:\Users\OZHall\MPLABXProjects\PTL30_fader_Master_test3\mcc_generated_files/mcc.c
+503 text4 CODE >87:C:\Users\OZHall\MPLABXProjects\PTL30_fader_Master_test3\mcc_generated_files/mcc.c
+506 text4 CODE >88:C:\Users\OZHall\MPLABXProjects\PTL30_fader_Master_test3\mcc_generated_files/mcc.c
+509 text4 CODE >89:C:\Users\OZHall\MPLABXProjects\PTL30_fader_Master_test3\mcc_generated_files/mcc.c
+50B text4 CODE >90:C:\Users\OZHall\MPLABXProjects\PTL30_fader_Master_test3\mcc_generated_files/mcc.c
+44C text3 CODE >15:C:\Program Files (x86)\Microchip\xc8\v1.42\sources\common\Umul16.c
+44C text3 CODE >43:C:\Program Files (x86)\Microchip\xc8\v1.42\sources\common\Umul16.c
+44F text3 CODE >45:C:\Program Files (x86)\Microchip\xc8\v1.42\sources\common\Umul16.c
+451 text3 CODE >46:C:\Program Files (x86)\Microchip\xc8\v1.42\sources\common\Umul16.c
+455 text3 CODE >47:C:\Program Files (x86)\Microchip\xc8\v1.42\sources\common\Umul16.c
+45A text3 CODE >48:C:\Program Files (x86)\Microchip\xc8\v1.42\sources\common\Umul16.c
+45F text3 CODE >49:C:\Program Files (x86)\Microchip\xc8\v1.42\sources\common\Umul16.c
+463 text3 CODE >52:C:\Program Files (x86)\Microchip\xc8\v1.42\sources\common\Umul16.c
+32D text2 CODE >78:C:\Users\OZHall\MPLABXProjects\PTL30_fader_Master_test3\main.c
+32D text2 CODE >79:C:\Users\OZHall\MPLABXProjects\PTL30_fader_Master_test3\main.c
+336 text2 CODE >80:C:\Users\OZHall\MPLABXProjects\PTL30_fader_Master_test3\main.c
+34F text2 CODE >81:C:\Users\OZHall\MPLABXProjects\PTL30_fader_Master_test3\main.c
+35A text2 CODE >82:C:\Users\OZHall\MPLABXProjects\PTL30_fader_Master_test3\main.c
+2CB text1 CODE >86:C:\Users\OZHall\MPLABXProjects\PTL30_fader_Master_test3\main.c
+2CB text1 CODE >87:C:\Users\OZHall\MPLABXProjects\PTL30_fader_Master_test3\main.c
+2D0 text1 CODE >90:C:\Users\OZHall\MPLABXProjects\PTL30_fader_Master_test3\main.c
+2D5 text1 CODE >91:C:\Users\OZHall\MPLABXProjects\PTL30_fader_Master_test3\main.c
+2DB text1 CODE >92:C:\Users\OZHall\MPLABXProjects\PTL30_fader_Master_test3\main.c
+2E7 text1 CODE >93:C:\Users\OZHall\MPLABXProjects\PTL30_fader_Master_test3\main.c
+2F8 text1 CODE >96:C:\Users\OZHall\MPLABXProjects\PTL30_fader_Master_test3\main.c
+2FC text1 CODE >97:C:\Users\OZHall\MPLABXProjects\PTL30_fader_Master_test3\main.c
+300 text1 CODE >99:C:\Users\OZHall\MPLABXProjects\PTL30_fader_Master_test3\main.c
+307 text1 CODE >101:C:\Users\OZHall\MPLABXProjects\PTL30_fader_Master_test3\main.c
+30C text1 CODE >102:C:\Users\OZHall\MPLABXProjects\PTL30_fader_Master_test3\main.c
+310 text1 CODE >104:C:\Users\OZHall\MPLABXProjects\PTL30_fader_Master_test3\main.c
+317 text1 CODE >106:C:\Users\OZHall\MPLABXProjects\PTL30_fader_Master_test3\main.c
+31C text1 CODE >92:C:\Users\OZHall\MPLABXProjects\PTL30_fader_Master_test3\main.c
+31D text1 CODE >108:C:\Users\OZHall\MPLABXProjects\PTL30_fader_Master_test3\main.c
+322 text1 CODE >109:C:\Users\OZHall\MPLABXProjects\PTL30_fader_Master_test3\main.c
+326 text1 CODE >110:C:\Users\OZHall\MPLABXProjects\PTL30_fader_Master_test3\main.c
+180 maintext CODE >121:C:\Users\OZHall\MPLABXProjects\PTL30_fader_Master_test3\main.c
+180 maintext CODE >123:C:\Users\OZHall\MPLABXProjects\PTL30_fader_Master_test3\main.c
+185 maintext CODE >124:C:\Users\OZHall\MPLABXProjects\PTL30_fader_Master_test3\main.c
+187 maintext CODE >132:C:\Users\OZHall\MPLABXProjects\PTL30_fader_Master_test3\main.c
+18A maintext CODE >138:C:\Users\OZHall\MPLABXProjects\PTL30_fader_Master_test3\main.c
+18B maintext CODE >141:C:\Users\OZHall\MPLABXProjects\PTL30_fader_Master_test3\main.c
+18C maintext CODE >152:C:\Users\OZHall\MPLABXProjects\PTL30_fader_Master_test3\main.c
+195 maintext CODE >153:C:\Users\OZHall\MPLABXProjects\PTL30_fader_Master_test3\main.c
+1A3 maintext CODE >155:C:\Users\OZHall\MPLABXProjects\PTL30_fader_Master_test3\main.c
+1AA maintext CODE >160:C:\Users\OZHall\MPLABXProjects\PTL30_fader_Master_test3\main.c
+1B5 maintext CODE >162:C:\Users\OZHall\MPLABXProjects\PTL30_fader_Master_test3\main.c
+1BE maintext CODE >163:C:\Users\OZHall\MPLABXProjects\PTL30_fader_Master_test3\main.c
+1CC maintext CODE >168:C:\Users\OZHall\MPLABXProjects\PTL30_fader_Master_test3\main.c
+1D7 maintext CODE >170:C:\Users\OZHall\MPLABXProjects\PTL30_fader_Master_test3\main.c
+1DC maintext CODE >171:C:\Users\OZHall\MPLABXProjects\PTL30_fader_Master_test3\main.c
+1E1 maintext CODE >175:C:\Users\OZHall\MPLABXProjects\PTL30_fader_Master_test3\main.c
+1ED maintext CODE >179:C:\Users\OZHall\MPLABXProjects\PTL30_fader_Master_test3\main.c
+1F2 maintext CODE >180:C:\Users\OZHall\MPLABXProjects\PTL30_fader_Master_test3\main.c
+1F6 maintext CODE >181:C:\Users\OZHall\MPLABXProjects\PTL30_fader_Master_test3\main.c
+1FB maintext CODE >182:C:\Users\OZHall\MPLABXProjects\PTL30_fader_Master_test3\main.c
+201 maintext CODE >183:C:\Users\OZHall\MPLABXProjects\PTL30_fader_Master_test3\main.c
+202 maintext CODE >186:C:\Users\OZHall\MPLABXProjects\PTL30_fader_Master_test3\main.c
+207 maintext CODE >187:C:\Users\OZHall\MPLABXProjects\PTL30_fader_Master_test3\main.c
+20B maintext CODE >188:C:\Users\OZHall\MPLABXProjects\PTL30_fader_Master_test3\main.c
+210 maintext CODE >189:C:\Users\OZHall\MPLABXProjects\PTL30_fader_Master_test3\main.c
+216 maintext CODE >195:C:\Users\OZHall\MPLABXProjects\PTL30_fader_Master_test3\main.c
+21B maintext CODE >196:C:\Users\OZHall\MPLABXProjects\PTL30_fader_Master_test3\main.c
+226 maintext CODE >197:C:\Users\OZHall\MPLABXProjects\PTL30_fader_Master_test3\main.c
+22C maintext CODE >198:C:\Users\OZHall\MPLABXProjects\PTL30_fader_Master_test3\main.c
+238 maintext CODE >200:C:\Users\OZHall\MPLABXProjects\PTL30_fader_Master_test3\main.c
+23D maintext CODE >203:C:\Users\OZHall\MPLABXProjects\PTL30_fader_Master_test3\main.c
+241 maintext CODE >204:C:\Users\OZHall\MPLABXProjects\PTL30_fader_Master_test3\main.c
+245 maintext CODE >205:C:\Users\OZHall\MPLABXProjects\PTL30_fader_Master_test3\main.c
+256 maintext CODE >158:C:\Users\OZHall\MPLABXProjects\PTL30_fader_Master_test3\main.c
+51B clrtext CODE >6583:C:\Users\OZHall\AppData\Local\Temp\s7b0.
+51B clrtext CODE >6584:C:\Users\OZHall\AppData\Local\Temp\s7b0.
+51C clrtext CODE >6585:C:\Users\OZHall\AppData\Local\Temp\s7b0.
+51C clrtext CODE >6586:C:\Users\OZHall\AppData\Local\Temp\s7b0.
+51D clrtext CODE >6587:C:\Users\OZHall\AppData\Local\Temp\s7b0.
+51E clrtext CODE >6588:C:\Users\OZHall\AppData\Local\Temp\s7b0.
+51F clrtext CODE >6589:C:\Users\OZHall\AppData\Local\Temp\s7b0.
+520 clrtext CODE >6590:C:\Users\OZHall\AppData\Local\Temp\s7b0.
+515 inittext CODE >6557:C:\Users\OZHall\AppData\Local\Temp\s7b0.
+515 inittext CODE >6558:C:\Users\OZHall\AppData\Local\Temp\s7b0.
+516 inittext CODE >6559:C:\Users\OZHall\AppData\Local\Temp\s7b0.
+516 inittext CODE >6560:C:\Users\OZHall\AppData\Local\Temp\s7b0.
+517 inittext CODE >6561:C:\Users\OZHall\AppData\Local\Temp\s7b0.
+518 inittext CODE >6562:C:\Users\OZHall\AppData\Local\Temp\s7b0.
+519 inittext CODE >6563:C:\Users\OZHall\AppData\Local\Temp\s7b0.
+51A inittext CODE >6564:C:\Users\OZHall\AppData\Local\Temp\s7b0.
+# %SYMTAB Section
+# An enumeration of all symbols in the program.
+# The beginning of the section is indicated by %SYMTAB.
+# Each line describes a single symbol as follows:
+#    <label> <value> [-]<load-adj> <class> <space> <psect> <file-name>
+# The value and load-adj are both in unqualified hexadecimal.
+# All other numeric values are in decimal.  The load-adj is the
+# quantity one needs to add to the symbol value in order to obtain the load
+# address of the symbol.  This value may be signed. If the symbol
+# was defined in a psect then <psect> will be "-". File-name
+# is the name of the object file in which the symbol was defined.
+%SYMTAB
+___latbits 2 0 ABS 0 - dist/default/production\PTL30_fader_Master_test3.production.obj
+__LdataBANK1 0 0 ABS 0 dataBANK1 -
+_I2C1_Initialize 966 0 CODE 0 text7 dist/default/production\PTL30_fader_Master_test3.production.obj
+__Hspace_0 800C 0 ABS 0 - -
+__Hspace_1 B4 0 ABS 0 - -
+__Hspace_2 0 0 ABS 0 - -
+__Hspace_3 0 0 ABS 0 - -
+__HidataBANK1 0 0 ABS 0 idataBANK1 -
+_p_i2c1_trb_current 73 0 COMMON 1 bssCOMMON dist/default/production\PTL30_fader_Master_test3.production.obj
+blinkyLoop@loopCount 36 0 BANK0 1 cstackBANK0 dist/default/production\PTL30_fader_Master_test3.production.obj
+__size_of_I2C1_MasterWriteTRBBuild 0 0 ABS 0 - dist/default/production\PTL30_fader_Master_test3.production.obj
+__Heeprom_data 0 0 EEDATA 3 eeprom_data -
+__CFG_MCLRE$ON 0 0 ABS 0 - dist/default/production\PTL30_fader_Master_test3.production.obj
+main@I2C_ADDRESS_FADELED0 59 0 BANK0 1 cstackBANK0 dist/default/production\PTL30_fader_Master_test3.production.obj
+__Hstrings 0 0 ABS 0 strings -
+__CFG_WDTCCS$SC 0 0 ABS 0 - dist/default/production\PTL30_fader_Master_test3.production.obj
+_LATA 16 0 ABS 0 - dist/default/production\PTL30_fader_Master_test3.production.obj
+_LATB 17 0 ABS 0 - dist/default/production\PTL30_fader_Master_test3.production.obj
+_LATC 18 0 ABS 0 - dist/default/production\PTL30_fader_Master_test3.production.obj
+_WPUA F39 0 ABS 0 - dist/default/production\PTL30_fader_Master_test3.production.obj
+_WPUB F44 0 ABS 0 - dist/default/production\PTL30_fader_Master_test3.production.obj
+_WPUC F4F 0 ABS 0 - dist/default/production\PTL30_fader_Master_test3.production.obj
+_WPUE F65 0 ABS 0 - dist/default/production\PTL30_fader_Master_test3.production.obj
+___sp 0 0 STACK 2 stack C:\Users\OZHall\AppData\Local\Temp\s7b0.obj
+_main 300 0 CODE 0 maintext dist/default/production\PTL30_fader_Master_test3.production.obj
+btemp 7E 0 ABS 0 - dist/default/production\PTL30_fader_Master_test3.production.obj
+start 40 0 CODE 0 init C:\Users\OZHall\AppData\Local\Temp\s7b0.obj
+__size_of_main 0 0 ABS 0 - dist/default/production\PTL30_fader_Master_test3.production.obj
+__HbssCOMMON 0 0 ABS 0 bssCOMMON -
+__CFG_SCANE$available 0 0 ABS 0 - dist/default/production\PTL30_fader_Master_test3.production.obj
+__size_of_I2C1_ISR 0 0 ABS 0 - dist/default/production\PTL30_fader_Master_test3.production.obj
+I2C1_ISR@i2c_10bit_address_restart 66 0 BANK0 1 bssBANK0 dist/default/production\PTL30_fader_Master_test3.production.obj
+__CFG_DEBUG$OFF 0 0 ABS 0 - dist/default/production\PTL30_fader_Master_test3.production.obj
+?___wmul 20 0 BANK0 1 cstackBANK0 dist/default/production\PTL30_fader_Master_test3.production.obj
+_blinkyLoop 596 0 CODE 0 text1 dist/default/production\PTL30_fader_Master_test3.production.obj
+__size_of_MYI2C_Write2LEDBytes 0 0 ABS 0 - dist/default/production\PTL30_fader_Master_test3.production.obj
+_p_i2c1_current 72 0 COMMON 1 bssCOMMON dist/default/production\PTL30_fader_Master_test3.production.obj
+main@prevFader8bitValue 56 0 BANK0 1 cstackBANK0 dist/default/production\PTL30_fader_Master_test3.production.obj
+__LidataBANK1 0 0 ABS 0 idataBANK1 -
+I2C1_ISR@i2c_address 75 0 COMMON 1 bssCOMMON dist/default/production\PTL30_fader_Master_test3.production.obj
+?_ADCC_GetSingleConversion 20 0 BANK0 1 cstackBANK0 dist/default/production\PTL30_fader_Master_test3.production.obj
+__Hpowerup 0 0 CODE 0 powerup -
+__size_of_SYSTEM_Initialize 0 0 ABS 0 - dist/default/production\PTL30_fader_Master_test3.production.obj
+I2C1_MasterWriteTRBBuild@ptrb 26 0 BANK0 1 cstackBANK0 dist/default/production\PTL30_fader_Master_test3.production.obj
+blinkyLoop@delayTime 34 0 BANK0 1 cstackBANK0 dist/default/production\PTL30_fader_Master_test3.production.obj
+intlevel0 0 0 CODE 0 functab C:\Users\OZHall\AppData\Local\Temp\s7b0.obj
+intlevel1 0 0 CODE 0 functab C:\Users\OZHall\AppData\Local\Temp\s7b0.obj
+intlevel2 0 0 CODE 0 functab C:\Users\OZHall\AppData\Local\Temp\s7b0.obj
+intlevel3 0 0 CODE 0 functab C:\Users\OZHall\AppData\Local\Temp\s7b0.obj
+intlevel4 0 0 CODE 0 functab C:\Users\OZHall\AppData\Local\Temp\s7b0.obj
+intlevel5 0 0 CODE 0 functab C:\Users\OZHall\AppData\Local\Temp\s7b0.obj
+__end_of_MYI2C_Write2LEDBytes 596 0 CODE 0 text9 dist/default/production\PTL30_fader_Master_test3.production.obj
+__LbssCOMMON 0 0 ABS 0 bssCOMMON -
+I2C1_ISR@pi2c_buf_ptr 71 0 COMMON 1 bssCOMMON dist/default/production\PTL30_fader_Master_test3.production.obj
+wtemp0 7E 0 ABS 0 - dist/default/production\PTL30_fader_Master_test3.production.obj
+_cMstrClkAdjust A42 0 STRCODE 0 stringtext1 dist/default/production\PTL30_fader_Master_test3.production.obj
+__Hfunctab 0 0 CODE 0 functab -
+I2C1_ISR@i2c_bytes_left 70 0 COMMON 1 bssCOMMON dist/default/production\PTL30_fader_Master_test3.production.obj
+__Hclrtext 0 0 ABS 0 clrtext -
+__end_of_I2C1_FunctionComplete 9E0 0 CODE 0 text17 dist/default/production\PTL30_fader_Master_test3.production.obj
+___wmul@multiplicand 22 0 BANK0 1 cstackBANK0 dist/default/production\PTL30_fader_Master_test3.production.obj
+_ADACCH 91 0 ABS 0 - dist/default/production\PTL30_fader_Master_test3.production.obj
+_ADACCL 90 0 ABS 0 - dist/default/production\PTL30_fader_Master_test3.production.obj
+_ADCON0 93 0 ABS 0 - dist/default/production\PTL30_fader_Master_test3.production.obj
+_ADCON1 94 0 ABS 0 - dist/default/production\PTL30_fader_Master_test3.production.obj
+_ADCON2 95 0 ABS 0 - dist/default/production\PTL30_fader_Master_test3.production.obj
+_ADCON3 96 0 ABS 0 - dist/default/production\PTL30_fader_Master_test3.production.obj
+_ADERRH 117 0 ABS 0 - dist/default/production\PTL30_fader_Master_test3.production.obj
+_ADERRL 116 0 ABS 0 - dist/default/production\PTL30_fader_Master_test3.production.obj
+_ADLTHH 10F 0 ABS 0 - dist/default/production\PTL30_fader_Master_test3.production.obj
+_ADLTHL 10E 0 ABS 0 - dist/default/production\PTL30_fader_Master_test3.production.obj
+_ADRESH 8D 0 ABS 0 - dist/default/production\PTL30_fader_Master_test3.production.obj
+_ADRESL 8C 0 ABS 0 - dist/default/production\PTL30_fader_Master_test3.production.obj
+_ADSTAT 97 0 ABS 0 - dist/default/production\PTL30_fader_Master_test3.production.obj
+_ADUTHH 111 0 ABS 0 - dist/default/production\PTL30_fader_Master_test3.production.obj
+_ADUTHL 110 0 ABS 0 - dist/default/production\PTL30_fader_Master_test3.production.obj
+_ANSELA F38 0 ABS 0 - dist/default/production\PTL30_fader_Master_test3.production.obj
+_ANSELB F43 0 ABS 0 - dist/default/production\PTL30_fader_Master_test3.production.obj
+_ANSELC F4E 0 ABS 0 - dist/default/production\PTL30_fader_Master_test3.production.obj
+__size_of_ADCC_GetSingleConversion 0 0 ABS 0 - dist/default/production\PTL30_fader_Master_test3.production.obj
+__size_of_I2C1_Initialize 0 0 ABS 0 - dist/default/production\PTL30_fader_Master_test3.production.obj
+_I2C1_ISR 8A 0 CODE 0 text15 dist/default/production\PTL30_fader_Master_test3.production.obj
+__end_of_I2C1_MasterWriteTRBBuild 898 0 CODE 0 text11 dist/default/production\PTL30_fader_Master_test3.production.obj
+__end_of_INTERRUPT_InterruptManager 40 0 CODE 0 intentry dist/default/production\PTL30_fader_Master_test3.production.obj
+__end_of___wmul 8D0 0 CODE 0 text3 dist/default/production\PTL30_fader_Master_test3.production.obj
+__end_of_blinkyLoop 65A 0 CODE 0 text1 dist/default/production\PTL30_fader_Master_test3.production.obj
+ADCC_GetSingleConversion@channel 23 0 BANK0 1 cstackBANK0 dist/default/production\PTL30_fader_Master_test3.production.obj
+MYI2C_Write2LEDBytes@F14421 A0 0 BANK1 1 dataBANK1 dist/default/production\PTL30_fader_Master_test3.production.obj
+__end_of_I2C1_ISR 300 0 CODE 0 text15 dist/default/production\PTL30_fader_Master_test3.production.obj
+_I2C1_FunctionComplete 9BC 0 CODE 0 text17 dist/default/production\PTL30_fader_Master_test3.production.obj
+__Lmaintext 0 0 ABS 0 maintext -
+MYI2C_Write2LEDBytes@LSBWriteByte 2F 0 BANK0 1 cstackBANK0 dist/default/production\PTL30_fader_Master_test3.production.obj
+__CFG_FEXTOSC$OFF 0 0 ABS 0 - dist/default/production\PTL30_fader_Master_test3.production.obj
+__end_of_cMstrClkAdjust A46 0 STRCODE 0 stringtext1 dist/default/production\PTL30_fader_Master_test3.production.obj
+I2C1_MasterWriteTRBBuild@pdata 20 0 BANK0 1 cstackBANK0 dist/default/production\PTL30_fader_Master_test3.production.obj
+PIN_MANAGER_Initialize@state 20 0 BANK0 1 cstackBANK0 dist/default/production\PTL30_fader_Master_test3.production.obj
+__size_of_delay 0 0 ABS 0 - dist/default/production\PTL30_fader_Master_test3.production.obj
+I2C1_MasterTRBInsert@ptrb_list 20 0 BANK0 1 cstackBANK0 dist/default/production\PTL30_fader_Master_test3.production.obj
+_i2c1_trb_count 74 0 COMMON 1 bssCOMMON dist/default/production\PTL30_fader_Master_test3.production.obj
+_PIN_MANAGER_Initialize 78C 0 CODE 0 text5 dist/default/production\PTL30_fader_Master_test3.production.obj
+start_initialization 44 0 CODE 0 cinit dist/default/production\PTL30_fader_Master_test3.production.obj
+_ODCONA F3A 0 ABS 0 - dist/default/production\PTL30_fader_Master_test3.production.obj
+_ODCONB F45 0 ABS 0 - dist/default/production\PTL30_fader_Master_test3.production.obj
+_ODCONC F50 0 ABS 0 - dist/default/production\PTL30_fader_Master_test3.production.obj
+_OSCFRQ 893 0 ABS 0 - dist/default/production\PTL30_fader_Master_test3.production.obj
+__CFG_WDTCPS$WDTCPS_31 0 0 ABS 0 - dist/default/production\PTL30_fader_Master_test3.production.obj
+_ADFLTRH 115 0 ABS 0 - dist/default/production\PTL30_fader_Master_test3.production.obj
+_ADFLTRL 114 0 ABS 0 - dist/default/production\PTL30_fader_Master_test3.production.obj
+_ADPREVH 8F 0 ABS 0 - dist/default/production\PTL30_fader_Master_test3.production.obj
+_ADPREVL 8E 0 ABS 0 - dist/default/production\PTL30_fader_Master_test3.production.obj
+_ADSTPTH 113 0 ABS 0 - dist/default/production\PTL30_fader_Master_test3.production.obj
+_ADSTPTL 112 0 ABS 0 - dist/default/production\PTL30_fader_Master_test3.production.obj
+_RC3PPS F23 0 ABS 0 - dist/default/production\PTL30_fader_Master_test3.production.obj
+_RC4PPS F24 0 ABS 0 - dist/default/production\PTL30_fader_Master_test3.production.obj
+__end_of_SYSTEM_Initialize A18 0 CODE 0 text4 dist/default/production\PTL30_fader_Master_test3.production.obj
+clear_ram0 A36 0 CODE 0 clrtext dist/default/production\PTL30_fader_Master_test3.production.obj
+__pcstackBANK0 20 0 BANK0 1 cstackBANK0 dist/default/production\PTL30_fader_Master_test3.production.obj
+__end_of_ADCC_GetSingleConversion 9BC 0 CODE 0 text13 dist/default/production\PTL30_fader_Master_test3.production.obj
+I2C1_MasterRead@trBlock B0 0 BANK1 1 bssBANK1 dist/default/production\PTL30_fader_Master_test3.production.obj
+__end_of_ADCC_Initialize 906 0 CODE 0 text8 dist/default/production\PTL30_fader_Master_test3.production.obj
+___int_sp 0 0 STACK 2 stack C:\Users\OZHall\AppData\Local\Temp\s7b0.obj
+__Hbank0 0 0 ABS 0 bank0 -
+__Hbank1 0 0 ABS 0 bank1 -
+__Hbank2 0 0 ABS 0 bank2 -
+__Hbank3 0 0 ABS 0 bank3 -
+__Hbank4 0 0 ABS 0 bank4 -
+__Hbank5 0 0 ABS 0 bank5 -
+__Hbank6 0 0 ABS 0 bank6 -
+__Hbank7 0 0 ABS 0 bank7 -
+__Hbank8 0 0 ABS 0 bank8 -
+__Hbank9 0 0 ABS 0 bank9 -
+__Hcinit 8A 0 CODE 0 cinit -
+__Hidloc 0 0 IDLOC 0 idloc -
+__size_of_OSCILLATOR_Initialize 0 0 ABS 0 - dist/default/production\PTL30_fader_Master_test3.production.obj
+_I2C1_MasterTRBInsert 700 0 CODE 0 text12 dist/default/production\PTL30_fader_Master_test3.production.obj
+__Hsfr10 0 0 ABS 0 sfr10 -
+__Hsfr11 0 0 ABS 0 sfr11 -
+__Hsfr12 0 0 ABS 0 sfr12 -
+__Hsfr13 0 0 ABS 0 sfr13 -
+__Hsfr14 0 0 ABS 0 sfr14 -
+__Hsfr15 0 0 ABS 0 sfr15 -
+__Hsfr16 0 0 ABS 0 sfr16 -
+__Hsfr17 0 0 ABS 0 sfr17 -
+__Hsfr18 0 0 ABS 0 sfr18 -
+__Hsfr19 0 0 ABS 0 sfr19 -
+__Hsfr20 0 0 ABS 0 sfr20 -
+__Hsfr21 0 0 ABS 0 sfr21 -
+__Hsfr22 0 0 ABS 0 sfr22 -
+__Hsfr23 0 0 ABS 0 sfr23 -
+__Hsfr24 0 0 ABS 0 sfr24 -
+__Hsfr25 0 0 ABS 0 sfr25 -
+__Hsfr26 0 0 ABS 0 sfr26 -
+__Hsfr27 0 0 ABS 0 sfr27 -
+__Hsfr28 0 0 ABS 0 sfr28 -
+__Hsfr29 0 0 ABS 0 sfr29 -
+__Hsfr30 0 0 ABS 0 sfr30 -
+__Hsfr31 0 0 ABS 0 sfr31 -
+__Hstack 0 0 STACK 2 stack -
+__Hbank10 0 0 ABS 0 bank10 -
+__Hbank11 0 0 ABS 0 bank11 -
+__Hbank12 0 0 ABS 0 bank12 -
+__Hbank13 0 0 BANK13 1 bank13 -
+__Hbank14 0 0 BANK14 1 bank14 -
+__Hbank15 0 0 BANK15 1 bank15 -
+__Hbank16 0 0 BANK16 1 bank16 -
+__Hbank17 0 0 BANK17 1 bank17 -
+__Hbank18 0 0 BANK18 1 bank18 -
+__Hbank19 0 0 BANK19 1 bank19 -
+__Hbank20 0 0 BANK20 1 bank20 -
+__Hbank21 0 0 BANK21 1 bank21 -
+__Hbank22 0 0 BANK22 1 bank22 -
+__Hbank23 0 0 BANK23 1 bank23 -
+__Hbank24 0 0 BANK24 1 bank24 -
+__Hbank25 0 0 BANK25 1 bank25 -
+__Hbank26 0 0 BANK26 1 bank26 -
+__Hbank27 0 0 BANK27 1 bank27 -
+__Hbank28 0 0 BANK28 1 bank28 -
+__Hbank29 0 0 BANK29 1 bank29 -
+__Hbank30 0 0 BANK30 1 bank30 -
+__Hbank31 0 0 BANK31 1 bank31 -
+main@iCounter 5D 0 BANK0 1 cstackBANK0 dist/default/production\PTL30_fader_Master_test3.production.obj
+__Hbigram 0 0 ABS 0 bigram -
+__Hmaintext 0 0 ABS 0 maintext -
+__Hcommon 0 0 ABS 0 common -
+__Hconfig 10018 0 CONFIG 0 config -
+MYI2C_Write2LEDBytes@MSBWriteByte 2E 0 BANK0 1 cstackBANK0 dist/default/production\PTL30_fader_Master_test3.production.obj
+__Lbank0 0 0 ABS 0 bank0 -
+__Lbank1 0 0 ABS 0 bank1 -
+__Lbank2 0 0 ABS 0 bank2 -
+__Lbank3 0 0 ABS 0 bank3 -
+__Lbank4 0 0 ABS 0 bank4 -
+__Lbank5 0 0 ABS 0 bank5 -
+__Lbank6 0 0 ABS 0 bank6 -
+__Lbank7 0 0 ABS 0 bank7 -
+__Lbank8 0 0 ABS 0 bank8 -
+__Lbank9 0 0 ABS 0 bank9 -
+__Lcinit 44 0 CODE 0 cinit -
+__Lidloc 0 0 IDLOC 0 idloc -
+__Lsfr10 0 0 ABS 0 sfr10 -
+__Lsfr11 0 0 ABS 0 sfr11 -
+__Lsfr12 0 0 ABS 0 sfr12 -
+__Lsfr13 0 0 ABS 0 sfr13 -
+__Lsfr14 0 0 ABS 0 sfr14 -
+__Lsfr15 0 0 ABS 0 sfr15 -
+__Lsfr16 0 0 ABS 0 sfr16 -
+__Lsfr17 0 0 ABS 0 sfr17 -
+__Lsfr18 0 0 ABS 0 sfr18 -
+__Lsfr19 0 0 ABS 0 sfr19 -
+__Lsfr20 0 0 ABS 0 sfr20 -
+__Lsfr21 0 0 ABS 0 sfr21 -
+__Lsfr22 0 0 ABS 0 sfr22 -
+__Lsfr23 0 0 ABS 0 sfr23 -
+__Lsfr24 0 0 ABS 0 sfr24 -
+__Lsfr25 0 0 ABS 0 sfr25 -
+__Lsfr26 0 0 ABS 0 sfr26 -
+__Lsfr27 0 0 ABS 0 sfr27 -
+__Lsfr28 0 0 ABS 0 sfr28 -
+__Lsfr29 0 0 ABS 0 sfr29 -
+__Lsfr30 0 0 ABS 0 sfr30 -
+__Lsfr31 0 0 ABS 0 sfr31 -
+__Lstack 0 0 STACK 2 stack -
+init_ram A2A 0 CODE 0 inittext dist/default/production\PTL30_fader_Master_test3.production.obj
+blinkyLoop@maxLoops 31 0 BANK0 1 cstackBANK0 dist/default/production\PTL30_fader_Master_test3.production.obj
+MYI2C_Write2LEDBytes@sourceData 34 0 BANK0 1 cstackBANK0 dist/default/production\PTL30_fader_Master_test3.production.obj
+__Linittext 0 0 ABS 0 inittext -
+_INTCONbits B 0 ABS 0 - dist/default/production\PTL30_fader_Master_test3.production.obj
+__Habs1 0 0 ABS 0 abs1 -
+__Hcode 0 0 ABS 0 code -
+__Hinit 40 0 CODE 0 init -
+__Hsfr0 0 0 ABS 0 sfr0 -
+__Hsfr1 0 0 ABS 0 sfr1 -
+__Hsfr2 0 0 ABS 0 sfr2 -
+__Hsfr3 0 0 ABS 0 sfr3 -
+__Hsfr4 0 0 ABS 0 sfr4 -
+__Hsfr5 0 0 ABS 0 sfr5 -
+__Hsfr6 0 0 ABS 0 sfr6 -
+__Hsfr7 0 0 ABS 0 sfr7 -
+__Hsfr8 0 0 ABS 0 sfr8 -
+__Hsfr9 0 0 ABS 0 sfr9 -
+__Htext 0 0 ABS 0 text -
+__Labs1 0 0 ABS 0 abs1 -
+__Lcode 0 0 ABS 0 code -
+__Linit 40 0 CODE 0 init -
+__Lsfr0 0 0 ABS 0 sfr0 -
+__Lsfr1 0 0 ABS 0 sfr1 -
+__Lsfr2 0 0 ABS 0 sfr2 -
+__Lsfr3 0 0 ABS 0 sfr3 -
+__Lsfr4 0 0 ABS 0 sfr4 -
+__Lsfr5 0 0 ABS 0 sfr5 -
+__Lsfr6 0 0 ABS 0 sfr6 -
+__Lsfr7 0 0 ABS 0 sfr7 -
+__Lsfr8 0 0 ABS 0 sfr8 -
+__Lsfr9 0 0 ABS 0 sfr9 -
+__Ltext 0 0 ABS 0 text -
+__pstringtext1 A42 0 STRCODE 0 stringtext1 dist/default/production\PTL30_fader_Master_test3.production.obj
+__size_of_I2C1_BusCollisionISR 0 0 ABS 0 - dist/default/production\PTL30_fader_Master_test3.production.obj
+delay@counter 2D 0 BANK0 1 cstackBANK0 dist/default/production\PTL30_fader_Master_test3.production.obj
+_SSP1CON1 190 0 ABS 0 - dist/default/production\PTL30_fader_Master_test3.production.obj
+_SSP1CON3 192 0 ABS 0 - dist/default/production\PTL30_fader_Master_test3.production.obj
+_SSP1STAT 18F 0 ABS 0 - dist/default/production\PTL30_fader_Master_test3.production.obj
+___wmul 898 0 CODE 0 text3 dist/default/production\PTL30_fader_Master_test3.production.obj
+__CFG_WDTCWS$WDTCWS_7 0 0 ABS 0 - dist/default/production\PTL30_fader_Master_test3.production.obj
+__LcstackBANK0 0 0 ABS 0 cstackBANK0 -
+int$flags 7E 0 ABS 0 - dist/default/production\PTL30_fader_Master_test3.production.obj
+__HcstackCOMMON 0 0 ABS 0 cstackCOMMON -
+__size_of_INTERRUPT_InterruptManager 0 0 ABS 0 - dist/default/production\PTL30_fader_Master_test3.production.obj
+_GIE 5F 0 ABS 0 - dist/default/production\PTL30_fader_Master_test3.production.obj
+__S0 800C 0 ABS 0 - -
+__S1 B4 0 ABS 0 - -
+__S2 0 0 ABS 0 - -
+__S3 0 0 ABS 0 - -
+_ADCC_Initialize 8D0 0 CODE 0 text8 dist/default/production\PTL30_fader_Master_test3.production.obj
+I2C1_MasterWrite@pdata 2D 0 BANK0 1 cstackBANK0 dist/default/production\PTL30_fader_Master_test3.production.obj
+I2C1_MasterWrite@pflag 2A 0 BANK0 1 cstackBANK0 dist/default/production\PTL30_fader_Master_test3.production.obj
+__end_of_I2C1_BusCollisionISR A48 0 CODE 0 text18 dist/default/production\PTL30_fader_Master_test3.production.obj
+I2C1_Stop@completion_code 78 0 COMMON 1 cstackCOMMON dist/default/production\PTL30_fader_Master_test3.production.obj
+__size_of_blinkyLoop 0 0 ABS 0 - dist/default/production\PTL30_fader_Master_test3.production.obj
+_SYSTEM_Initialize A00 0 CODE 0 text4 dist/default/production\PTL30_fader_Master_test3.production.obj
+__CFG_BOREN$ON 0 0 ABS 0 - dist/default/production\PTL30_fader_Master_test3.production.obj
+__Lintentry 8 0 CODE 0 intentry -
+MYI2C_Write2LEDBytes@pointerByte 4E 0 BANK0 1 cstackBANK0 dist/default/production\PTL30_fader_Master_test3.production.obj
+_MYI2C_Write2LEDBytes 4AE 0 CODE 0 text9 dist/default/production\PTL30_fader_Master_test3.production.obj
+reset_vec 0 0 CODE 0 reset_vec C:\Users\OZHall\AppData\Local\Temp\s7b0.obj
+__pdataBANK1 A0 0 BANK1 1 dataBANK1 dist/default/production\PTL30_fader_Master_test3.production.obj
+__size_of___wmul 0 0 ABS 0 - dist/default/production\PTL30_fader_Master_test3.production.obj
+__LbssBANK0 0 0 ABS 0 bssBANK0 -
+__LbssBANK1 0 0 ABS 0 bssBANK1 -
+I2C1_MasterTRBInsert@count 23 0 BANK0 1 cstackBANK0 dist/default/production\PTL30_fader_Master_test3.production.obj
+__CFG_FCMEN$ON 0 0 ABS 0 - dist/default/production\PTL30_fader_Master_test3.production.obj
+__Lstringtext1 0 0 ABS 0 stringtext1 -
+I2C1_MasterTRBInsert@pflag 21 0 BANK0 1 cstackBANK0 dist/default/production\PTL30_fader_Master_test3.production.obj
+_INTERRUPT_InterruptManager 8 0 CODE 0 intentry dist/default/production\PTL30_fader_Master_test3.production.obj
+MYI2C_Write2LEDBytes@nCount 47 0 BANK0 1 cstackBANK0 dist/default/production\PTL30_fader_Master_test3.production.obj
+_PIE3bits 719 0 ABS 0 - dist/default/production\PTL30_fader_Master_test3.production.obj
+I2C1_MasterWriteTRBBuild@address 22 0 BANK0 1 cstackBANK0 dist/default/production\PTL30_fader_Master_test3.production.obj
+__ptext10 808 0 CODE 0 text10 dist/default/production\PTL30_fader_Master_test3.production.obj
+__ptext11 858 0 CODE 0 text11 dist/default/production\PTL30_fader_Master_test3.production.obj
+__ptext12 700 0 CODE 0 text12 dist/default/production\PTL30_fader_Master_test3.production.obj
+__ptext13 994 0 CODE 0 text13 dist/default/production\PTL30_fader_Master_test3.production.obj
+__ptext15 8A 0 CODE 0 text15 dist/default/production\PTL30_fader_Master_test3.production.obj
+__ptext16 936 0 CODE 0 text16 dist/default/production\PTL30_fader_Master_test3.production.obj
+__ptext17 9BC 0 CODE 0 text17 dist/default/production\PTL30_fader_Master_test3.production.obj
+__ptext18 A46 0 CODE 0 text18 dist/default/production\PTL30_fader_Master_test3.production.obj
+__end_of_PIN_MANAGER_Initialize 808 0 CODE 0 text5 dist/default/production\PTL30_fader_Master_test3.production.obj
+__Lbank10 0 0 ABS 0 bank10 -
+__Lbank11 0 0 ABS 0 bank11 -
+__Lbank12 0 0 ABS 0 bank12 -
+__Lbank13 0 0 BANK13 1 bank13 -
+__Lbank14 0 0 BANK14 1 bank14 -
+__Lbank15 0 0 BANK15 1 bank15 -
+__Lbank16 0 0 BANK16 1 bank16 -
+__Lbank17 0 0 BANK17 1 bank17 -
+__Lbank18 0 0 BANK18 1 bank18 -
+__Lbank19 0 0 BANK19 1 bank19 -
+__Lbank20 0 0 BANK20 1 bank20 -
+__Lbank21 0 0 BANK21 1 bank21 -
+__Lbank22 0 0 BANK22 1 bank22 -
+__Lbank23 0 0 BANK23 1 bank23 -
+__Lbank24 0 0 BANK24 1 bank24 -
+__Lbank25 0 0 BANK25 1 bank25 -
+__Lbank26 0 0 BANK26 1 bank26 -
+__Lbank27 0 0 BANK27 1 bank27 -
+__Lbank28 0 0 BANK28 1 bank28 -
+__Lbank29 0 0 BANK29 1 bank29 -
+__Lbank30 0 0 BANK30 1 bank30 -
+__Lbank31 0 0 BANK31 1 bank31 -
+_SSP1CLKPPSbits EC5 0 ABS 0 - dist/default/production\PTL30_fader_Master_test3.production.obj
+__pmaintext 300 0 CODE 0 maintext dist/default/production\PTL30_fader_Master_test3.production.obj
+__Lbigram 0 0 ABS 0 bigram -
+__CFG_BORV$LO 0 0 ABS 0 - dist/default/production\PTL30_fader_Master_test3.production.obj
+__CFG_RSTOSC$HFINT1 0 0 ABS 0 - dist/default/production\PTL30_fader_Master_test3.production.obj
+__Lcommon 0 0 ABS 0 common -
+__Lconfig 1000E 0 CONFIG 0 config -
+__end_of_I2C1_Stop 966 0 CODE 0 text16 dist/default/production\PTL30_fader_Master_test3.production.obj
+__CFG_CP$OFF 0 0 ABS 0 - dist/default/production\PTL30_fader_Master_test3.production.obj
+__CFG_WDTE$OFF 0 0 ABS 0 - dist/default/production\PTL30_fader_Master_test3.production.obj
+__Hinittext 0 0 ABS 0 inittext -
+___wmul@multiplier 20 0 BANK0 1 cstackBANK0 dist/default/production\PTL30_fader_Master_test3.production.obj
+__size_of_I2C1_Stop 0 0 ABS 0 - dist/default/production\PTL30_fader_Master_test3.production.obj
+__size_of_I2C1_FunctionComplete 0 0 ABS 0 - dist/default/production\PTL30_fader_Master_test3.production.obj
+MYI2C_Write2LEDBytes@status 52 0 BANK0 1 cstackBANK0 dist/default/production\PTL30_fader_Master_test3.production.obj
+_I2C1_MasterWrite 808 0 CODE 0 text10 dist/default/production\PTL30_fader_Master_test3.production.obj
+stackhi 23EF 0 ABS 0 - C:\Users\OZHall\AppData\Local\Temp\s7b0.obj
+stacklo 2064 0 ABS 0 - C:\Users\OZHall\AppData\Local\Temp\s7b0.obj
+_OSCCON1 88D 0 ABS 0 - dist/default/production\PTL30_fader_Master_test3.production.obj
+_OSCCON3 88F 0 ABS 0 - dist/default/production\PTL30_fader_Master_test3.production.obj
+_OSCTUNE 892 0 ABS 0 - dist/default/production\PTL30_fader_Master_test3.production.obj
+_ADCON0bits 93 0 ABS 0 - dist/default/production\PTL30_fader_Master_test3.production.obj
+_ADCON1bits 94 0 ABS 0 - dist/default/production\PTL30_fader_Master_test3.production.obj
+_I2C1_Stop 936 0 CODE 0 text16 dist/default/production\PTL30_fader_Master_test3.production.obj
+_ADCON2bits 95 0 ABS 0 - dist/default/production\PTL30_fader_Master_test3.production.obj
+_ADCON3bits 96 0 ABS 0 - dist/default/production\PTL30_fader_Master_test3.production.obj
+__CFG_LVP$OFF 0 0 ABS 0 - dist/default/production\PTL30_fader_Master_test3.production.obj
+__size_of_ADCC_Initialize 0 0 ABS 0 - dist/default/production\PTL30_fader_Master_test3.production.obj
+__Lspace_0 0 0 ABS 0 - -
+__Lspace_1 0 0 ABS 0 - -
+__Lspace_2 0 0 ABS 0 - -
+__Lspace_3 0 0 ABS 0 - -
+__pbssCOMMON 70 0 COMMON 1 bssCOMMON dist/default/production\PTL30_fader_Master_test3.production.obj
+__CFG_LPBOREN$OFF 0 0 ABS 0 - dist/default/production\PTL30_fader_Master_test3.production.obj
+__HcstackBANK0 0 0 ABS 0 cstackBANK0 -
+_PIR3bits 70F 0 ABS 0 - dist/default/production\PTL30_fader_Master_test3.production.obj
+__Lend_init 40 0 CODE 0 end_init -
+__CFG_CSWEN$ON 0 0 ABS 0 - dist/default/production\PTL30_fader_Master_test3.production.obj
+__LcstackCOMMON 0 0 ABS 0 cstackCOMMON -
+I2C1_MasterWrite@trBlock 68 0 BANK0 1 bssBANK0 dist/default/production\PTL30_fader_Master_test3.production.obj
+__CFG_ZCD$OFF 0 0 ABS 0 - dist/default/production\PTL30_fader_Master_test3.production.obj
+end_of_initialization 82 0 CODE 0 cinit dist/default/production\PTL30_fader_Master_test3.production.obj
+__Hintentry 40 0 CODE 0 intentry -
+__CFG_STVREN$ON 0 0 ABS 0 - dist/default/production\PTL30_fader_Master_test3.production.obj
+_PPSLOCKbits E8F 0 ABS 0 - dist/default/production\PTL30_fader_Master_test3.production.obj
+__Lstrings 0 0 ABS 0 strings -
+MYI2C_Write2LEDBytes@dataAddress 44 0 BANK0 1 cstackBANK0 dist/default/production\PTL30_fader_Master_test3.production.obj
+__Hreset_vec 4 0 CODE 0 reset_vec -
+__HbssBANK0 0 0 ABS 0 bssBANK0 -
+__HbssBANK1 0 0 ABS 0 bssBANK1 -
+__ptext1 596 0 CODE 0 text1 dist/default/production\PTL30_fader_Master_test3.production.obj
+__ptext2 65A 0 CODE 0 text2 dist/default/production\PTL30_fader_Master_test3.production.obj
+__ptext3 898 0 CODE 0 text3 dist/default/production\PTL30_fader_Master_test3.production.obj
+__ptext4 A00 0 CODE 0 text4 dist/default/production\PTL30_fader_Master_test3.production.obj
+__ptext5 78C 0 CODE 0 text5 dist/default/production\PTL30_fader_Master_test3.production.obj
+__ptext6 A18 0 CODE 0 text6 dist/default/production\PTL30_fader_Master_test3.production.obj
+__ptext7 966 0 CODE 0 text7 dist/default/production\PTL30_fader_Master_test3.production.obj
+__ptext8 8D0 0 CODE 0 text8 dist/default/production\PTL30_fader_Master_test3.production.obj
+__ptext9 4AE 0 CODE 0 text9 dist/default/production\PTL30_fader_Master_test3.production.obj
+MYI2C_Write2LEDBytes@counter 4A 0 BANK0 1 cstackBANK0 dist/default/production\PTL30_fader_Master_test3.production.obj
+main@iLSByte 57 0 BANK0 1 cstackBANK0 dist/default/production\PTL30_fader_Master_test3.production.obj
+_I2C1_MasterWriteTRBBuild 858 0 CODE 0 text11 dist/default/production\PTL30_fader_Master_test3.production.obj
+main@iMSByte 5A 0 BANK0 1 cstackBANK0 dist/default/production\PTL30_fader_Master_test3.production.obj
+__Lpowerup 0 0 CODE 0 powerup -
+__Leeprom_data 0 0 EEDATA 3 eeprom_data -
+main@fader8bitValue 5C 0 BANK0 1 cstackBANK0 dist/default/production\PTL30_fader_Master_test3.production.obj
+_i2c1_state 67 0 BANK0 1 bssBANK0 dist/default/production\PTL30_fader_Master_test3.production.obj
+__Lreset_vec 0 0 CODE 0 reset_vec -
+__Hstringtext1 0 0 ABS 0 stringtext1 -
+MYI2C_Write2LEDBytes@slaveDeviceAddress 49 0 BANK0 1 cstackBANK0 dist/default/production\PTL30_fader_Master_test3.production.obj
+__end_of_I2C1_MasterWrite 858 0 CODE 0 text10 dist/default/production\PTL30_fader_Master_test3.production.obj
+__CFG_CLKOUTEN$OFF 0 0 ABS 0 - dist/default/production\PTL30_fader_Master_test3.production.obj
+MYI2C_Write2LEDBytes@timeOut 4C 0 BANK0 1 cstackBANK0 dist/default/production\PTL30_fader_Master_test3.production.obj
+__end_of__initialization 82 0 CODE 0 cinit dist/default/production\PTL30_fader_Master_test3.production.obj
+__Lfunctab 0 0 CODE 0 functab -
+_ADSTATbits 97 0 ABS 0 - dist/default/production\PTL30_fader_Master_test3.production.obj
+__pidataBANK1 9E0 0 CODE 0 idataBANK1 dist/default/production\PTL30_fader_Master_test3.production.obj
+__size_of_I2C1_MasterWrite 0 0 ABS 0 - dist/default/production\PTL30_fader_Master_test3.production.obj
+__Lclrtext 0 0 ABS 0 clrtext -
+_SSP1CON1bits 190 0 ABS 0 - dist/default/production\PTL30_fader_Master_test3.production.obj
+_SSP1CON2bits 191 0 ABS 0 - dist/default/production\PTL30_fader_Master_test3.production.obj
+_i2c1_object 61 0 BANK0 1 bssBANK0 dist/default/production\PTL30_fader_Master_test3.production.obj
+I2C1_MasterWriteTRBBuild@length 21 0 BANK0 1 cstackBANK0 dist/default/production\PTL30_fader_Master_test3.production.obj
+__pcstackCOMMON 77 0 COMMON 1 cstackCOMMON dist/default/production\PTL30_fader_Master_test3.production.obj
+I2C1_MasterWrite@address 28 0 BANK0 1 cstackBANK0 dist/default/production\PTL30_fader_Master_test3.production.obj
+__end_of_I2C1_Initialize 994 0 CODE 0 text7 dist/default/production\PTL30_fader_Master_test3.production.obj
+_SSP1ADD 18D 0 ABS 0 - dist/default/production\PTL30_fader_Master_test3.production.obj
+_SSP1BUF 18C 0 ABS 0 - dist/default/production\PTL30_fader_Master_test3.production.obj
+__Hend_init 44 0 CODE 0 end_init -
+__end_of_main 4AE 0 CODE 0 maintext dist/default/production\PTL30_fader_Master_test3.production.obj
+_ADACQ 9D 0 ABS 0 - dist/default/production\PTL30_fader_Master_test3.production.obj
+_ADACT 99 0 ABS 0 - dist/default/production\PTL30_fader_Master_test3.production.obj
+_ADCAP 9B 0 ABS 0 - dist/default/production\PTL30_fader_Master_test3.production.obj
+_ADCLK 98 0 ABS 0 - dist/default/production\PTL30_fader_Master_test3.production.obj
+_ADCNT 10C 0 ABS 0 - dist/default/production\PTL30_fader_Master_test3.production.obj
+_ADPCH 9E 0 ABS 0 - dist/default/production\PTL30_fader_Master_test3.production.obj
+_ADPRE 9C 0 ABS 0 - dist/default/production\PTL30_fader_Master_test3.production.obj
+_ADREF 9A 0 ABS 0 - dist/default/production\PTL30_fader_Master_test3.production.obj
+_ADRPT 10D 0 ABS 0 - dist/default/production\PTL30_fader_Master_test3.production.obj
+__end_of_delay 700 0 CODE 0 text2 dist/default/production\PTL30_fader_Master_test3.production.obj
+_OSCEN 891 0 ABS 0 - dist/default/production\PTL30_fader_Master_test3.production.obj
+_PORTB D 0 ABS 0 - dist/default/production\PTL30_fader_Master_test3.production.obj
+_PORTC E 0 ABS 0 - dist/default/production\PTL30_fader_Master_test3.production.obj
+_TRISA 11 0 ABS 0 - dist/default/production\PTL30_fader_Master_test3.production.obj
+_TRISB 12 0 ABS 0 - dist/default/production\PTL30_fader_Master_test3.production.obj
+_TRISC 13 0 ABS 0 - dist/default/production\PTL30_fader_Master_test3.production.obj
+__Hram 0 0 ABS 0 ram -
+__Lram 0 0 ABS 0 ram -
+_delay 65A 0 CODE 0 text2 dist/default/production\PTL30_fader_Master_test3.production.obj
+__CFG_CPD$OFF 0 0 ABS 0 - dist/default/production\PTL30_fader_Master_test3.production.obj
+__size_of_PIN_MANAGER_Initialize 0 0 ABS 0 - dist/default/production\PTL30_fader_Master_test3.production.obj
+__pintentry 8 0 CODE 0 intentry dist/default/production\PTL30_fader_Master_test3.production.obj
+_SSP1DATPPSbits EC6 0 ABS 0 - dist/default/production\PTL30_fader_Master_test3.production.obj
+__size_of_I2C1_MasterTRBInsert 0 0 ABS 0 - dist/default/production\PTL30_fader_Master_test3.production.obj
+delay@delaytime 26 0 BANK0 1 cstackBANK0 dist/default/production\PTL30_fader_Master_test3.production.obj
+MYI2C_Write2LEDBytes@pD 46 0 BANK0 1 cstackBANK0 dist/default/production\PTL30_fader_Master_test3.production.obj
+_I2C1_BusCollisionISR A46 0 CODE 0 text18 dist/default/production\PTL30_fader_Master_test3.production.obj
+__HdataBANK1 0 0 ABS 0 dataBANK1 -
+__end_of_OSCILLATOR_Initialize A2A 0 CODE 0 text6 dist/default/production\PTL30_fader_Master_test3.production.obj
+__CFG_PPS1WAY$ON 0 0 ABS 0 - dist/default/production\PTL30_fader_Master_test3.production.obj
+__initialization 44 0 CODE 0 cinit dist/default/production\PTL30_fader_Master_test3.production.obj
+__CFG_PWRTE$OFF 0 0 ABS 0 - dist/default/production\PTL30_fader_Master_test3.production.obj
+_i2c1_tr_queue 6C 0 BANK0 1 bssBANK0 dist/default/production\PTL30_fader_Master_test3.production.obj
+_ADCC_GetSingleConversion 994 0 CODE 0 text13 dist/default/production\PTL30_fader_Master_test3.production.obj
+__pbssBANK0 61 0 BANK0 1 bssBANK0 dist/default/production\PTL30_fader_Master_test3.production.obj
+__pbssBANK1 B0 0 BANK1 1 bssBANK1 dist/default/production\PTL30_fader_Master_test3.production.obj
+MYI2C_Write2LEDBytes@writeBuffer 4F 0 BANK0 1 cstackBANK0 dist/default/production\PTL30_fader_Master_test3.production.obj
+_PPSLOCK E8F 0 ABS 0 - dist/default/production\PTL30_fader_Master_test3.production.obj
+__CFG_WRT$OFF 0 0 ABS 0 - dist/default/production\PTL30_fader_Master_test3.production.obj
+main@faderValue 5F 0 BANK0 1 cstackBANK0 dist/default/production\PTL30_fader_Master_test3.production.obj
+___wmul@product 24 0 BANK0 1 cstackBANK0 dist/default/production\PTL30_fader_Master_test3.production.obj
+I2C1_MasterWrite@length 27 0 BANK0 1 cstackBANK0 dist/default/production\PTL30_fader_Master_test3.production.obj
+delay@adjustedDelaytime 29 0 BANK0 1 cstackBANK0 dist/default/production\PTL30_fader_Master_test3.production.obj
+__end_of_I2C1_MasterTRBInsert 78C 0 CODE 0 text12 dist/default/production\PTL30_fader_Master_test3.production.obj
+__pswtext1 906 0 CONST 0 swtext1 dist/default/production\PTL30_fader_Master_test3.production.obj
+_OSCILLATOR_Initialize A18 0 CODE 0 text6 dist/default/production\PTL30_fader_Master_test3.production.obj
+# %SPLITSTAB Section
+# This section enumerates all the psect splits performed by the assembler.
+# The beginning of the section is indicated by %SPLITSTAB.
+# Each line is a record a particular split, where the parent psect is on
+# the left and the child on the right.  Note that a child psect is always
+# split form the top of the parent psect. All splits from a given parent
+# are listed in the order in which they occurred.
+%SPLITSTAB
+# %DABS Section
+# This section contains a table of all usuage of the assember
+# directive DABS in the program. Each line has the following format:
+#   <name> <space> <address> <size>
+# If the DABS was originally labelled then that shall be <name>,
+# otherwise name will be "-".  The <space> number is in decimal.
+# <address> and <size> are in byte units as unqaulified hexadecimal
+%DABS
+- 1 7E 2
+# %SEGMENTS Section
+# This sections enumerates the segments of the program.  Each segment
+# is described on a single line as follows:
+#    <name> <space> <link address> <file address> <size> <delta>
+# Addresses and size are in unqualified hexadecimal.  The link address
+# and size are in units of delta. The file address is in units of bytes.
+# All other numeric quantities are in decimal.
+%SEGMENTS
+text16 0 49B 936 86 2
+text18 0 523 A46 1 2
+cstackBANK0 1 20 20 4F 1
+stringtext1 0 521 A42 2 2
+intentry 0 4 8 47F 2
+reset_vec 0 0 0 2 2
+swtext1 0 483 906 18 2
+dataBANK1 1 A0 A0 14 1
+bssCOMMON 1 70 70 E 1
+config 0 8007 1000E 5 2

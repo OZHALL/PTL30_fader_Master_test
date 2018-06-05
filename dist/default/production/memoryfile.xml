@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project>
+  <executable name="dist/default/production\PTL30_fader_Master_test3.production.hex">
+    <memory name="program">
+      <units>words</units>
+      <length>8192</length>
+      <used>1312</used>
+      <free>6880</free>
+    </memory>
+    <memory name="data">
+      <units>bytes</units>
+      <length>1024</length>
+      <used>115</used>
+      <free>909</free>
+    </memory>
+  </executable>
+</project>
