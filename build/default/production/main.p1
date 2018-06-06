@@ -13412,8 +13412,8 @@ Version 3.2 HI-TECH Software Intermediate Code
 [f ]
 "150
 [v _I2C_ADDRESS_FADELED0 `uc ~T0 @X0 1 a ]
-[; ;main.c: 150: uint8_t I2C_ADDRESS_FADELED0 = 0x10;
-[e = _I2C_ADDRESS_FADELED0 -> -> 16 `i `uc ]
+[; ;main.c: 150: uint8_t I2C_ADDRESS_FADELED0 = 0x68;
+[e = _I2C_ADDRESS_FADELED0 -> -> 104 `i `uc ]
 "151
 [v _iCounter `ui ~T0 @X0 1 a ]
 [; ;main.c: 151: uint16_t iCounter=0;

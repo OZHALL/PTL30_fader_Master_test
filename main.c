@@ -147,7 +147,7 @@ void UpdateLEDsFromValue(uint8_t inFaderNum,uint8_t inValue);
 void MYI2C_Write2LEDBytes(uint8_t slaveDeviceAddress, uint8_t MSBWriteByte,uint8_t LSBWriteByte);
 void main(void)
 {
-    uint8_t I2C_ADDRESS_FADELED0 =  0x10;  // assume only 1 device for now
+    uint8_t I2C_ADDRESS_FADELED0 =  0x68;  // assume only 1 device for now
     uint16_t iCounter=0; // counter
     uint16_t iMSByte;
     uint16_t iLSByte;
